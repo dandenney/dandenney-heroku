@@ -1,0 +1,288 @@
+/* ----- Initial Setup ----- */
+
+.deck-container pre {
+  font-family: 'Andale Mono', Courier, monospace;
+}
+.trigger {
+  display: none;
+}
+
+
+
+/* ----- Swiss Theme ----- */
+
+.deck-container {
+	font-family: "Helvetica Neue", sans-serif;
+	font-size:1.25em;
+	background:#fff;
+	
+	.slide {
+		background:#fff;
+	}
+	
+	h1 {
+		color:#000;
+	}
+
+	h2 {
+		color:#c00;
+		border-bottom-color:#ccc;
+	}
+
+	h3 {
+		color:#888;
+	}
+
+	pre {
+		border-color:#ccc;
+	}
+
+	code {
+		color:#888;
+	}
+
+	blockquote {
+		font-size:2em;
+		font-style:italic;
+		padding:1em 2em;
+		color:#000;
+		border-left:5px solid #ccc;
+
+		p {
+			margin:0;
+		}
+
+		cite {
+			font-size:.5em;
+			font-style:normal;
+			font-weight:bold;
+			color:#888;
+		}
+	}
+	
+	::-moz-selection{ background:#c00; color:#fff; }
+	::selection { background:#c00; color:#fff; }
+	
+	a {
+		&, &:hover, &:focus, &:active, &:visited {
+			color:#c00;
+			text-decoration:none;
+		}
+		
+		&:hover, &:focus {
+			text-decoration:underline;
+		}
+	}
+	
+	.deck-prev-link, .deck-next-link {
+		background:#ccc;
+		font-family:serif; // sans-serif arrows x-browser fail
+		
+		&, &:hover, &:focus, &:active, &:visited {
+			color:#fff;
+		}
+		
+		&:hover, &:focus {
+			background:#c00;
+			text-decoration:none;
+		}
+	}
+	
+	.deck-status {
+		font-size:0.6666em;
+	}
+	
+	&.deck-menu {
+		.slide {
+			background:#eee;
+		}
+		
+		.deck-current, .no-touch & .slide:hover {
+			background:#ddf;
+		}
+	}
+}
+
+
+
+/*----------------------------------------------------------
+  Base deck.js Style
+----------------------------------------------------------*/
+
+/* ----- Status Plugin ----- */
+
+.deck-container .deck-status {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  color: #888;
+  z-index: 3;
+  margin: 0;
+}
+@media print {
+  .deck-status {
+    display: none;
+  }
+}
+
+/* ----- GoTo Plugin ----- */
+
+.deck-container {	
+	.goto-form {
+		position:absolute;
+		z-index:3;
+		bottom:10px;
+		left:50%;
+		height:1.75em;
+		margin:0 0 0 -7.125em;
+		line-height:1.75em;
+		padding:0.625em;
+		display:none;
+		background:#ccc;
+		overflow:hidden;
+		.borderradius & {
+			-webkit-border-radius:10px;
+			-moz-border-radius:10px;
+			border-radius:10px;
+		}
+		label {
+			font-weight:bold;
+		}
+		label, input {
+			display:inline-block;
+			font-family:inherit;
+		}
+	}
+}
+.deck-goto .goto-form {
+	display:block;
+}
+#goto-slide {
+	width:4.375em;
+	margin:0 0.625em;
+	height:1.4375em;
+}
+@media print {
+	.goto-form, #goto-slide {
+		display:none !important;
+	}
+}
+
+/* ----- Transitions ----- */
+
+@mixin translate($x: 0, $y: 0, $z: 0) {
+	-webkit-transform:translate3d($x, $y, $z);
+	-moz-transform:translate($x, $y);
+	-ms-transform:translate($x, $y);
+	-o-transform:translate($x, $y);
+	transform:translate3d($x, $y, $z);
+}
+
+@mixin rotate($deg) {
+	-webkit-transform:rotate($deg);
+	-moz-transform:rotate($deg);
+	-ms-transform:rotate($deg);
+	-o-transform:rotate($deg);
+	transform:rotate($deg);
+}
+
+@mixin transition($prop, $duration, $easing: ease-in-out, $delay: 0ms) {
+	-webkit-transition:$prop $duration $easing $delay;
+	-moz-transition:$prop $duration $easing $delay;
+	-ms-transition:$prop $duration $easing $delay;
+	-o-transition:$prop $duration $easing $delay;
+	transition:$prop $duration $easing $delay;
+}
+
+@mixin transform($val) {
+	-webkit-transform:$val;
+	-moz-transform:$val;
+	-ms-transform:$val;
+	-o-transform:$val;
+	transform:$val;
+}
+
+.csstransitions.csstransforms {
+	.deck-container {
+		overflow-y:hidden;
+		
+		> .slide {
+			-webkit-transition:-webkit-transform 500ms ease-in-out;
+			-moz-transition:-moz-transform 500ms ease-in-out;
+			-ms-transition:-ms-transform 500ms ease-in-out;
+			-o-transition:-o-transform 500ms ease-in-out;
+			transition:transform 500ms ease-in-out;
+		}
+	}
+	
+	.deck-container:not(.deck-menu) {
+		> .slide {
+			position:absolute;
+			top:0;
+			left:0;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			width:100%;
+			padding:0 48px;
+			
+			.slide {
+				position:relative;
+				left:0;
+				top:0;
+				-webkit-transition:-webkit-transform 500ms ease-in-out, opacity 500ms ease-in-out;
+				-moz-transition:-moz-transform 500ms ease-in-out, opacity 500ms ease-in-out;
+				-ms-transition:-ms-transform 500ms ease-in-out, opacity 500ms ease-in-out;
+				-o-transition:-o-transform 500ms ease-in-out, opacity 500ms ease-in-out;
+				transition:-webkit-transform 500ms ease-in-out, opacity 500ms ease-in-out;
+			}
+
+			.deck-next, .deck-after {
+				visibility:visible;
+				@include translate(0, 1600px);
+			}
+
+			.deck-before, .deck-previous {
+				opacity:0.4;
+			}
+		}
+
+		> .deck-previous {
+			@include translate(0, -200%);
+		}
+
+		> .deck-before {
+			@include translate(0, -400%);
+		}
+
+		> .deck-next {
+			@include translate(0, 200%);
+		}
+
+		> .deck-after {
+			@include translate(0, 400%);
+		}
+		
+		> .deck-before, > .deck-previous {
+			.slide {
+				visibility:visible;
+			}
+		}
+
+		> .deck-child-current {
+			@include transform(none);
+		}
+	}
+	
+	.deck-prev-link {
+		left:auto;
+		right:8px;
+		top:59px;
+		@include rotate(90deg);
+	}
+	
+	.deck-next-link {
+		top:99px;
+		@include rotate(90deg);
+	}
+}

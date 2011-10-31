@@ -1,0 +1,7 @@
+source 'http://rubygems.org'
+gem 'sinatra'
+gem 'bundler'
+gem 'haml'
+gem 'rdiscount'
+gem 'sass'
+gem 'thin'
