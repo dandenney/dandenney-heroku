@@ -1,10 +1,44 @@
 /* ----- Initial Setup ----- */
 
+mark {
+  background: none;
+  color: #333;
+}
 .deck-container pre {
   font-family: 'Andale Mono', Courier, monospace;
 }
 .trigger {
   display: none;
+}
+.tag {
+  color: #005e8e;
+}
+.attr {
+  color: #00992f;
+}
+.id {
+  color: #994100;
+}
+.comment {
+  color: #999;
+}
+.filter {
+  color: #000;
+}
+
+.on-slide-40 .initial, .on-slide-43 .initial, .on-slide-48 .initial, .on-slide-51 .initial, .on-slide-51 .initial, .on-slide-55 .initial, .on-slide-58 .initial, .on-slide-59 .initial, .on-slide-60 .initial, .on-slide-67 .initial, .on-slide-70 .initial, .on-slide-73 .initial, .on-slide-74 .initial, .on-slide-81 .initial, .on-slide-85 .initial, .on-slide-86 .initial, .on-slide-89 .initial, .on-slide-105 .initial, .on-slide-108 .initial, .on-slide-115 .initial, .on-slide-118 .initial, .on-slide-121 .initial, .on-slide-124 .initial, {
+  color: #999;
+  span {
+    color: #999;
+  }
+}
+
+.on-slide-40 .mark-1, .on-slide-43 .mark-1, .on-slide-48 .mark-1, .on-slide-51 .mark-1, .on-slide-52 .mark-2, .on-slide-55 .mark-1, .on-slide-58 .mark-1, .on-slide-59 .mark-2, .on-slide-60 .mark-3, .on-slide-67 .mark-1, .on-slide-70 .mark-1, .on-slide-73 .mark-1, .on-slide-74 .mark-2, .on-slide-81 .mark-1, .on-slide-85 .mark-1, .on-slide-86 .mark-2, .on-slide-89 .mark-1, .on-slide-105 .mark-1, .on-slide-108 .mark-1, .on-slide-115 .mark-1, .on-slide-118 .mark-1, .on-slide-121 .mark-1, .on-slide-124 .mark-1, {
+  background: #ffd0d0;
+  color: #ff0000;
+  span {
+    color: #ff0000;
+  }
 }
 
 
@@ -178,14 +212,6 @@
 	transform:translate3d($x, $y, $z);
 }
 
-@mixin rotate($deg) {
-	-webkit-transform:rotate($deg);
-	-moz-transform:rotate($deg);
-	-ms-transform:rotate($deg);
-	-o-transform:rotate($deg);
-	transform:rotate($deg);
-}
-
 @mixin transition($prop, $duration, $easing: ease-in-out, $delay: 0ms) {
 	-webkit-transition:$prop $duration $easing $delay;
 	-moz-transition:$prop $duration $easing $delay;
@@ -203,16 +229,14 @@
 }
 
 .csstransitions.csstransforms {
-	.deck-container {
-		overflow-y:hidden;
-		
-		> .slide {
-			-webkit-transition:-webkit-transform 500ms ease-in-out;
-			-moz-transition:-moz-transform 500ms ease-in-out;
-			-ms-transition:-ms-transform 500ms ease-in-out;
-			-o-transition:-o-transform 500ms ease-in-out;
-			transition:transform 500ms ease-in-out;
-		}
+	overflow-x:hidden;
+	
+	.deck-container > .slide {
+		-webkit-transition:-webkit-transform 500ms ease-in-out;
+		-moz-transition:-moz-transform 500ms ease-in-out;
+		-ms-transition:-ms-transform 500ms ease-in-out;
+		-o-transition:-o-transform 500ms ease-in-out;
+		transition:transform 500ms ease-in-out;
 	}
 	
 	.deck-container:not(.deck-menu) {
@@ -230,16 +254,16 @@
 				position:relative;
 				left:0;
 				top:0;
-				-webkit-transition:-webkit-transform 500ms ease-in-out, opacity 500ms ease-in-out;
+				/*-webkit-transition:-webkit-transform 500ms ease-in-out, opacity 500ms ease-in-out;
 				-moz-transition:-moz-transform 500ms ease-in-out, opacity 500ms ease-in-out;
 				-ms-transition:-ms-transform 500ms ease-in-out, opacity 500ms ease-in-out;
 				-o-transition:-o-transform 500ms ease-in-out, opacity 500ms ease-in-out;
-				transition:-webkit-transform 500ms ease-in-out, opacity 500ms ease-in-out;
+				transition:-webkit-transform 500ms ease-in-out, opacity 500ms ease-in-out;*/
 			}
 
 			.deck-next, .deck-after {
 				visibility:visible;
-				@include translate(0, 1600px);
+				@include translate(200%);
 			}
 
 			.deck-before, .deck-previous {
@@ -248,19 +272,19 @@
 		}
 
 		> .deck-previous {
-			@include translate(0, -200%);
+			@include translate(-200%);
 		}
 
 		> .deck-before {
-			@include translate(0, -400%);
+			@include translate(-400%);
 		}
 
 		> .deck-next {
-			@include translate(0, 200%);
+			@include translate(200%);
 		}
 
 		> .deck-after {
-			@include translate(0, 400%);
+			@include translate(400%);
 		}
 		
 		> .deck-before, > .deck-previous {
@@ -272,17 +296,5 @@
 		> .deck-child-current {
 			@include transform(none);
 		}
-	}
-	
-	.deck-prev-link {
-		left:auto;
-		right:8px;
-		top:59px;
-		@include rotate(90deg);
-	}
-	
-	.deck-next-link {
-		top:99px;
-		@include rotate(90deg);
 	}
 }

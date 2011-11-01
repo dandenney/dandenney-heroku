@@ -18,9 +18,9 @@
     %section.slide
       %h2 Who's This Guy?
       %ul
-        %li.slide Nick Walsh
-        %li.slide Front-end dev at <a href="http://envylabs.com">Envy Labs</a>
-        %li.slide <a href="http://twitter.com/nickawalsh">@nickawalsh</a>
+        %li Nick Walsh
+        %li <a href="http://envylabs.com">Envy Labs</a>
+        %li <a href="http://twitter.com/nickawalsh">@nickawalsh</a>
   
     %section.slide
       %h2 Adding Haml
@@ -66,12 +66,12 @@
       %pre.initial
         :preserve
           !!! 5
-          %html{lang: 'en'}
-            %head
-              %title The Distance
-            %body
-              #id.class
-                %h1.class Italian Leather Sofa
+          %<span class="tag">html</span>{<span class="attr">lang: 'en'</span>}
+            %<span class="tag">head</span>
+              %<span class="tag">title</span> A Real Human Being
+            %<span class="tag">body</span>
+              <span class="id">#id.class</span>
+                %<span class="tag">h1</span><span class="id">.class</span> And a Real Hero
     
     / Section - History
     
@@ -87,14 +87,14 @@
       %ul
         %li.slide Original implementation created by Hampton Catlin (also responsible for Sass)
         %li.slide Current implementation and maintenance by Nathan Weizenbaum
-        %li.slide MIT license, source (and ability to contribute) at <a href="https://github.com/nex3/haml">https://github.com/nex3/haml</a>
+        %li.slide MIT licensed, source (and ability to contribute) at <a href="https://github.com/nex3/haml">github.com/nex3/haml</a>
         %li.slide Originally packaged with Sass
         
     %section.slide
       %blockquote
         cleaner and DRY-er<br />
         write HTML haiku<br />
-        templating fun. Scraunched.
+        templating fun. Scraunched*
       %p (Don't worry, this'll be the only haiku.)
     
     / Section - HTML to Haml
@@ -121,7 +121,7 @@
         %li.slide.trigger
       %pre.initial
         :preserve
-          %h1 A Header
+          %<span class="tag">h1</span> But You're Still the Same
           
     %section.slide
       %h2 Basic Tags
@@ -130,9 +130,9 @@
         %li.slide.trigger
       %pre.initial
         :preserve
-          %span Kept thinking I could never live
-          <mark class="mark-1">%span
-            Without you by my side</mark>
+          %<span class="tag">p</span> I don't have wheels on my car.
+          <mark class="mark-1">%<span class="tag">p</span>
+            That's one thing you should know about me.</mark>
             
     %section.slide
       %h2 Illegal Nesting
@@ -141,13 +141,13 @@
         %li.slide.trigger
       %pre.initial
         :preserve
-          %h3 In Waves
-            <mark class="mark-1">%b Special Edition</mark>
+          %<span class="tag">h3</span> A Real Hero
+            <mark class="mark-1">%<span class="tag">b</span> EP</mark>
       
     %section.slide
       %h2 Doctypes
       %ul
-        %li.slide A sampling of Haml's doctype possibilities
+        %li A sampling of Haml's <var>doctype</var> shortcuts
         %li.slide.trigger
       %pre.initial
         :preserve
@@ -162,71 +162,102 @@
         %li.slide.trigger
       %pre.initial
         :preserve
-          %a<mark class="mark-1">{href: 'http://haml-lang.org', title: 'A Link'}</mark> A Link
+          %<span class="tag">a</span><mark class="mark-1">{<span class="attr">href: 'http://haml-lang.org', title: 'A Link'</span>}</mark>
+            I drive, for movies.
       
     %section.slide
       %h2 IDs &amp; Classes
       %ul
         %li.slide Classes and IDs may also be added via hash
-        %li.slide More commonly, though, they're added with a convenient, CSS selector-like shorthand
+        %li.slide More commonly, though, they're denoted with a CSS selector-like shorthand
         %li.slide.trigger
       %pre.initial
         :preserve
-          %h2<mark class="mark-1">{id: 'id', class: 'class'}</mark> This line is the same
-          %h2<mark class="mark-2">#id.class</mark> As this line
+          %<span class="tag">p</span><mark class="mark-1">{<span class="attr">id: 'id-1', class: 'class'</span>}</mark>
+            Is that dangerous?
+          %<span class="tag">p</span><mark class="mark-2"><span class="id">#id-2.class</span></mark>
+            It's only part time.
       
     %section.slide
       %h2 Multiple Classes
+      %ul
+        %li.slide More than one class may be added in this manner
+        %li.slide.trigger
       %pre.initial
         :preserve
-          %div.class-1.class-2 More than one!
+          %<span class="tag">p</span><mark class="mark-1"><span class="id">.class-1.class-2</span></mark>
+            Hey kid, you want a toothpick?
       
     %section.slide
       %h2 Divs Aplenty
+      %ul
+        %li.slide <var>div</var> tags can be denoted like other tags
+        %li.slide If you only include a class or ID, the engine will assume you want a <var>div</var>
+        %li.slide Attributes can still be passed to the shorthand version
+        %li.slide.trigger
       %pre.initial
         :preserve
-          %div.class Div 1
-          .class Div 2
-          .class{rel: 'lightbox'} Div 3
+          <mark class="mark-1">%<span class="tag">div</span><span class="id">.class</span></mark>
+            Sorry about the noise.
+          <mark class="mark-2"><span class="id">.class</span></mark>
+            I was gonna call the cops.
+          <mark class="mark-3"><span class="id">.class</span>{<span class="attr">rel: 'lightbox'</span>}</mark>
+            I wish you would.
       
     %section.slide
       %h2 Nesting
+      %ul
+        %li Like content, use two spaces to nest tags within other tags
+        %li.slide.trigger
       %pre.initial
         :preserve
-          %header
-            %h1 Header
-            %h2 Sub Header
-            %nav
-              %a{href: 'http://haml-lang.org', title: 'A Link'} A Link
+          %<span class="tag">header</span>
+            %<span class="tag">h1</span> Bum Bum Bum
+            %<span class="tag">h2</span> Dum Dum Dum
+            %<span class="tag">nav</span>
+              %<span class="tag">a</span>{<span class="attr">href: 'http://haml-lang.org', title: 'A Link'</span>}
+                Wub Wub Wub
       
     %section.slide
       %h2 Comments (HTML)
+      %ul
+        %li HTML comments are created with a <var>/</var>
+        %li.slide.trigger
       %pre.initial
         :preserve
-          / A comment
+          <span class="comment">/ A standard comment</span>
       
     %section.slide
       %h2 Comments (Conditional)
+      %ul
+        %li.slide IE conditional comments utilize their normal syntax, and tags/content can be nested within
+        %li.slide.trigger
       %pre.initial
         :preserve
-          / [lte IE8]
-            %h1 Broken
+          <span class="comment">/ <mark class="mark-1">[lte IE8]</mark></span>
+            %<span class="tag">h1</span> Congratulations!
           
     %section.slide
       %h2 Comments (Haml)
+      %ul
+        %li.slide Haml comments, denoted with <var>-#</var>, and elements nested within are not part of the output
+        %li.slide.trigger
       %pre.initial
         :preserve
-          -# %section
-            %p
-              %em First!
+          <span class="comment"><mark class="mark-1">-#</mark> %section</span>
+            %<span class="tag">p</span>
+              %<span class="tag">em</span> First!
       
     %section.slide
       %h2 Self-Closing Tags
+      %ul
+        %li.slide Tags that should self-close can be denoted with a trailing <var>/</var>
+        %li.slide Haml has a default set of tags, however, that are automatically self-closed
+        %li.slide.trigger
       %pre.initial
         :preserve
-          %br
-          %hr/
-          %input{type: 'text', placeholder: 'Name'}
+          <mark class="mark-1">%<span class="tag">br</span>/</mark>
+          <mark class="mark-2">%<span class="tag">br</span></mark>
     
     / Section - Filters & Server-Side
       
@@ -236,43 +267,43 @@
     %section.slide
       %h2 Haml Filters
       %ul
-        %li Allow for blocks of code/content to be evaluated differently
-        %li Examples include :javascript, :markdown, :css, :escaped
+        %li.slide Allow for blocks of code/content to be filtered outside of Haml then added to Haml's output
+        %li.slide Examples include <var>:javascript</var>, <var>:markdown</var>, <var>:css</var>, <var>:escaped</var>
         
     %section.slide
-      %h2 :javascript Filter
+      %h2 JavaScript Filter
+      %ul
+        %li.slide Rather than embedding JavaScript on your page via <var>&lt;script&gt;</var> tags, it can be placed within Haml's <var>:javascript</var> filter
+        %li.slide.trigger
       %pre.initial
         :preserve
-          :javascript
+          <mark class="mark-1"><span class="filter">:javascript</span></mark>
             var x = 42;
             alert(x);
-            
-    %section.slide
-      %h2 :css Filter
-      %pre.initial
-        :preserve
-          %head
-            :css
-              h1 {
-                font-size: 2em;
-              }
               
     %section.slide
       %h1 Adding the Server-Side
-      
+    
     %section.slide
       %h2 Embedding Ruby
+      %ul
+        %li.slide A line beginning with <var>-</var> will be executed as normal Ruby (think <var>&lt;% %&gt;</var> in ERB or <var>&lt;? ?&gt;</var> in PHP)
+        %li.slide A line with <var>=</var> will output the evaluated result (think <var>&lt;%= %&gt;</var> in ERB or <var>&lt;?= ?&gt;</var> in PHP)
+        %li.slide.trigger
       %pre.initial
         :preserve
-          - color = "green"
-          = color
+          <mark class="mark-1">- color = "green"</mark>
+          <mark class="mark-2">= color</mark>
           
     %section.slide
       %h2 Embedding Ruby
+      %ul
+        %li.slide Constructs like <var>if</var> and <var>each</each> can be used. Note that these blocks do not need a manual <var>end</var> in Haml
+        %li.slide.trigger
       %pre.initial
         :preserve
           - color = "green"
-          - if color == "green"
+          <mark class="mark-1">- if color == "green"</mark>
             = color
     
     / Section - The Good  
@@ -283,37 +314,45 @@
     %section.slide
       %h2 So, Haml's Kinda Awesome
       %ul
-        %li Reduces repetition
-        %li Reduces effort
-        %li Code that tends to be easier to scan and maintain
+        %li.slide Reduces repetition
+        %li.slide Reduces effort
+        %li.slide Code that tends to be easier to scan and maintain
         
     %section.slide
       %h2 Universal Selectors
-      %pre
-        :preserve
-          .class
-      %pre
-        :preserve
-          .class {
-            width: 200px;
-          }
-      %pre
-        :preserve
-          $('.class').fadeIn();
+      %ul
+        %li.slide
+          %h3 Haml
+          %pre
+            :preserve
+              <span class="id">.class</span>
+        %li.slide
+          %h3 CSS
+          %pre
+            :preserve
+              <span class="id">.class</span> {
+                width: 200px;
+              }
+        %li.slide
+          %h3 jQuery
+          %pre
+            :preserve
+              $('<span class="id">.class</span>').fadeIn();
           
     %section.slide
       %h2 Uniformity
+      %p Strict nesting conventions reduce the likelihood of this:
       %pre
-        :escaped
-          <div>
-            <h1>A Title</h1>
-            <form>
-            <p>
-            <label>A Label</label>
-            <input type="text" id="input" />
-            </p>
-          </form>
-          </div>
+        :preserve
+          &lt;div&gt;
+            &lt;h1&gt;A Title&lt;/h1&gt;
+          &lt;form&gt;
+            &lt;p&gt;
+            &lt;label&gt;A Label&lt;/label&gt;
+            &lt;input type="text" id="input" /&gt;
+              &lt;/p&gt;
+          &lt;/form&gt;
+          &lt;/div&gt;
           
     %section.slide
       %h1 (They'll Probably See This at Some Point)
@@ -324,82 +363,117 @@
       %h1 The Bad
       
     %section.slide
-      %h1 Haml is Not For Content Formatting
+      %h1 Haml is Not for Content Formatting
       
     %section.slide
       %h2 Content Formatting
+      %ul
+        %li.slide Attempting to use inline tags inside long blocks of content proves troublesome
+        %li.slide.trigger
       %pre.initial
         :preserve
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, seddo
-            %a{href: 'http://haml-lang.org'} Haml
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            %em Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut.
+          %<span class="tag">p</span>
+            Call me Ishmael. Some years ago &mdash;
+            <mark class="mark-1">%<span class="tag">em</span> never mind how long precisely</mark>
+            &mdash; having
+            <mark class="mark-1">%<span class="tag">span</span> little or no money</mark>
+            in my purse&hellip;
         
     %section.slide
       %h2 Content Formatting
+      %ul
+        %li.slide One possible solution is to use standard HTML
+        %li.slide.trigger
       %pre.initial
-        :escaped
-          %p Lorem ipsum dolor sit amet, <span>consectetur</span> adipisicing elit, sed do <a href="http://haml-lang.org">eiusmod</a>.
+        :preserve
+          %<span class="tag">p</span>
+            Call me Ishmael. Some years ago &mdash; <mark class="mark-1"><span class="tag">&lt;em&gt;</span>never mind how long precisely<span class="tag">&lt;/em&gt;</span></mark> &mdash; having&hellip;
         
     %section.slide
       %h2 Markdown
-      %p <a href="http://daringfireball.net/projects/markdown/">http://daringfireball.net/projects/markdown/</a>
+      %ul
+        %li For more content formatting control, using the <var>:markdown</var> filter or similar is preferred
+        %li.slide Requires markdown is installed on your server: <a href="http://daringfireball.net/projects/markdown/">daringfireball.net/projects/markdown</a>
+        %li.slide.trigger
       %pre.initial
         :preserve
-          :markdown
+          <span class="filter">:markdown</span>
             ## Heading 2
-            ### Heading 3
             1. List Item 1
-            2. List Item 2
-            3. List *Item 3*
+            2. List *Item 2*
             
-            [A Link](http://nick-walsh.com)
+            [A Link](http://haml-lang.org)
         
     %section.slide
       %h1 Neat Output Needs a Little Effort (Sometimes)
         
     %section.slide
       %h2 Multiline
+      %ul
+        %li.slide Use of <var>|</var> causes multiple lines to be evaluated as one
+        %li.slide.trigger
       %pre.initial
         :preserve
-          %p
-            Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud.
-          %p
-            Lorem ipsum dolor sit amet, consectetur |
-            adipisicing elit, sed do eiusmod tempor |
-            incididunt ut labore et dolore magna aliqua. |
-            Ut enim ad minim veniam, quis nostrud. |
+          %<span class="tag">p</span>
+            Like noiseless nautilus shells, their light prows sped
+            through the sea; but only slowly they neared the foe.
+          %<span class="tag">p</span>
+            Like noiseless nautilus shells, their light prows sped <mark class="mark-1">|</mark>
+            through the sea; but only slowly they neared the foe. <mark class="mark-1">|</mark>
         
     %section.slide
       %h2 Whitespace (Inside)
+      %ul
+        %li.slide Use of <var>&lt;</var> removes whitespace within a tag
+        %li.slide.trigger
       %pre.initial
         :preserve
-          %h1
-            %span Title
-          %h1<
-            %span Title
+          %<span class="tag">h1</span>
+            %<span class="tag">span</span> The Pacific
+          %<span class="tag">h1</span><mark class="mark-1"><</mark>
+            %<span class="tag">span</span> The Symphony
         
     %section.slide
       %h2 Whitespace (Outside)
+      %ul
+        %li.slide Use of <var>&gt;</var> removes whitespace outside of a tag
+        %li.slide.trigger
       %pre.initial
         :preserve
-          %h1
-            %span The
-            %em> Perfect
-            Case
+          %<span class="tag">h1</span>
+            %<span class="tag">span</span> The
+            %<span class="tag">em</span><mark class="mark-1">></mark> Chase
+            \-- First Day
         
     %section.slide
       %h2 Whitespace (Both)
+      %ul
+        %li.slide Both may be used to remove whitespace inside and out
+        %li.slide.trigger
       %pre.initial
         :preserve
-          .class
-            %h1><
-              %span Title
+          <span class="id">.class</span>
+            %<span class="tag">h1</span><mark class="mark-1">><</mark>
+              %<span class="tag">span</span> Title
+              
+    %section.slide
+      %h1 It's a Little Slower*
+      
+    %section.slide{'data-ugly' => 'true'}
+      %h2 The Ugly Option
+      %ul
+        %li.slide If Haml's <var>:ugly</var> option is set to <var>true</var>, Haml won't indent/format its output
+        %li.slide Default in production mode of Rails
+        %li.slide.trigger
+      %pre.initial
+        :preserve
+          !!! 5
+          %<span class="tag">html</span>{<span class="attr">lang: 'en'</span>}
+            %<span class="tag">head</span>
+              %<span class="tag">title</span> A Real Human Being
+            %<span class="tag">body</span>
+              <span class="id">#id.class</span>
+                %<span class="tag">h1</span><span class="id">.class</span> And a Real Hero
         
     %section.slide
       %h1 Haml Probably Isn't the Solution for a Small Site
@@ -407,9 +481,59 @@
     / Section - The Installation  
       
     %section.slide
-      %h1 Know Your HTML
+      %h1 The Installation
       
+    %section.slide
+      %h2 So, You're On Board
+      %ul
+        %li Tinkerbin (<a href="http://tinkerbin.com">tinkerbin.com</a>) is a browser-based tool similar to jsFiddle that includes Haml support.
+        
+    %section.slide
+      %h2 Basic Usage
+      %ul
+        %li.slide You'll need Ruby (<a href="http://ruby-lang.org">ruby-lang.org</a>) installed to use Haml &mdash; it's pre-installed on Macs
+        %li.slide
+          %h3 From the Command Line
+          %pre gem install haml
+        %li.slide
+          %h3 Compile When You're Finished
+          %pre haml input.haml output.html
+        %li.slide Useful for testing and familiarizing, but inefficient for a full site and maintenance
+          
+    %section.slide
+      %h2 Static Site Usage
+      %ul
+        %li.slide A number of static site generators exist that allow easy use of templating languages like Haml, Sass, and CoffeeScript
+        %li.slide Middleman (<a href="http://middlemanapp.com/">middlemanapp.com</a>)
+        %li.slide nanoc (<a href="http://nanoc.stoneship.org/">nanoc.stoneship.org</a>)
+        %li.slide Require some setup
+        
+    %section.slide
+      %h2 Rails
+      %ul
+        %li.slide Most common usage
+        %li.slide
+          %h3 Add to Your <var>Gemfile</var>
+          %pre gem "haml"
+        %li.slide After running bundler (or other preferred gem management technique), you can use the <var>.html.haml</var> extension on view files
+        
+    %section.slide
+      %h1 What About My Favorite Language?
       
+    %section.slide
+      %h2 Syntax Highlighting
+      %ul
+        %li Visit the Haml Editor Support page (<a href="http://haml-lang.com/editors.html">haml-lang.com/editors.html</a>) for links to popular bundles to editors like TextMate, Coda, Vim and Emacs.
+      
+    %section.slide
+      %h2 Resources &amp; Credits
+      %h3 Haml
+      %p <a href="haml-lang.org">haml-lang.org</a>
+      
+      %h3 This Presentation
+      %p <a href="http://addinghaml.heroku.com">addinghaml.heroku.com</a>
+      %p <a href="https://github.com/nickawalsh/addinghaml">github.com/nickawalsh/addinghaml</a>
+      %p <a href="http://sinatrarb.com">Sinatra</a> + <a href="http://imakewebthings.github.com/deck.js/">deck.js</a>
       
     / Status
      
