@@ -7,6 +7,12 @@ mark {
 .deck-container pre {
   font-family: 'Andale Mono', Courier, monospace;
 }
+.csstransforms .deck-container pre h1 {
+  font-size: 2em;
+  padding: 0;
+  position: static;
+  text-align: left;
+}
 .trigger {
   display: none;
 }
