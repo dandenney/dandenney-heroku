@@ -1,17 +1,16 @@
 /* ----- (Modified) Base deck.js Styles ----- */
 
 html {
-	height:100%;
+  font-size: 16px;
+	height: 100%;
+	overflow: hidden;
 }
 .deck-container {
-	position:relative;
-	height:100%;
-	width:90%;
-	margin:0 auto;
-	padding:0 48px;
-	font-size:16px;
-	line-height:1.25;
-	overflow:hidden;
+  font-size: 62.5%;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
 	.js & {
 		visibility:hidden;
 	}
@@ -43,12 +42,6 @@ html {
 			content:none;
 		}
 	}
-	input, select {
-		vertical-align:middle;
-	}
-	select, input, textarea, button {
-		font:99% sans-serif;
-	}
 	pre, code {
 		font-family:monospace, sans-serif;
 	}
@@ -58,126 +51,12 @@ html {
 			outline:none;
 		}
 	}
-	ul, ol {
-		margin-left:2em;
-		vertical-align:top;
-	}
-	ol {
-		list-style-type:decimal;
-	}
-	nav {
-		ul, li {
-			margin:0;
-			list-style:none;
-			list-style-image:none;
-		}
-	}
-	small {
-		font-size:85%;
-	}
 	strong {
 		font-weight:bold;
-	}
-	sub, sup {
-		font-size:75%;
-		line-height:0;
-		position:relative;
-	}
-	sup {
-		top:-0.5em;
-	}
-	sub {
-	  bottom: -0.25em;
-	}
-	textarea {
-		overflow:auto;
-	}
-	input[type="radio"] {
-		vertical-align:text-bottom;
-	}
-	input[type="checkbox"] {
-		vertical-align:bottom;
-	}
-	label, input[type="button"], input[type="submit"], input[type="image"], button {
-		cursor:pointer;
-	}
-	button, input, select, textarea {
-		margin: 0;
-	}
-	input, textarea {
-		&:invalid {
-			border-radius:1px;
-			-moz-box-shadow:0px 0px 5px red;
-			-webkit-box-shadow:0px 0px 5px red;
-			box-shadow: 0px 0px 5px red;	
-			.no-boxshadow {
-				background-color: #f0dddd;
-			}
-		}
-	}
-	button {
-		width:auto;
-		overflow:visible;
-	}
-	&, select, input, textarea {
-		color:#444;
-	}
-	a {
-		color:#607890;
-		&:hover, &:focus {
-			color:#036;
-		}
-		&:link {
-			-webkit-tap-highlight-color: #fff;
-		}
 	}
 	
 	/* End HTML5 Boilerplate adaptations */
 
-	h1 {
-		font-size:4.5em;
-		font-weight:bold;
-		text-align:center;
-		padding-top:1em;
-		.csstransforms & {
-			padding:0 48px;
-			position:absolute;
-			left:0;
-			right:0;
-			top:50%;
-			-webkit-transform:translate(0, -50%);
-			-moz-transform:translate(0, -50%);
-			-ms-transform:translate(0, -50%);
-			-o-transform:translate(0, -50%);
-			transform:translate(0, -50%);
-		}
-	}
-	h2 {
-		font-size:2.25em;
-		font-weight:bold;
-		padding-top:.5em;
-		margin:0 0 .66666em 0;
-		border-bottom:3px solid #888;
-	}
-	h3 {
-		font-size:1.4375em;
-		font-weight:bold;
-		margin-bottom:.30435em;
-	}
-	h4 {
-		font-size:1.25em;
-		font-weight:bold;
-		margin-bottom:.25em;
-	}
-	h5 {
-		font-size:1.125em;
-		font-weight:bold;
-		margin-bottom:.2222em;
-	}
-	h6 {
-		font-size:1em;
-		font-weight:bold;
-	}
 	img, iframe, video {
 		display:block;
 		max-width:100%;
@@ -186,31 +65,20 @@ html {
 		display:block;
 		margin:0 auto;
 	}
-	p, blockquote, iframe, img, ul, ol, pre, video {
-		margin-bottom:1em;
-	}
 	pre {
 		white-space:pre;
 		white-space:pre-wrap;
 		word-wrap:break-word;
-		padding: 1em;
-		border:1px solid #888;
 	}
 	em {
-		font-style:italic;
+		font-style:normal;
 	}
 	li {
-		padding:.25em 0;
 		vertical-align:middle;
 	}
 	&.deck-loading {
 		display:none;
 	}
-}
-.slide {
-	width:auto;
-	min-height:100%;
-	position:relative;
 }
 .deck-before, .deck-previous, .deck-next, .deck-after {
 	position:absolute;

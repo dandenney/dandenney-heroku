@@ -7,12 +7,11 @@ function convertHaml(input, options, root) {
     beforeSend: function() {
       // loading
     },
-    error: function(jqXHR) {
-      root.append('<pre class="result">' + jqXHR.responseText + '</pre>');
-      root.attr('data-error','true');
+    error: function(jqXHR, textStatus) {
+      root.addClass('processed').append('<pre class="result">' + textStatus + '</pre>');
     },
     success: function(html) {
-      root.append('<pre class="result">' + html + '</pre>');
+      root.addClass('processed').append('<pre class="result">' + html + '</pre>');
     }
   });
 }
@@ -22,6 +21,7 @@ $(function(){
   
   $(document).bind('deck.change', function(e, from, to) {
     var slide = $('.slide').eq(to);
+    var next = $('.slide').eq(to+1);
     if (slide.hasClass('trigger')) {
       var root = slide.parent().parent();
       if (root.children('.result').length == 0) {
@@ -31,6 +31,8 @@ $(function(){
         };
         convertHaml(haml, options, root);
       }
+    } else if (next.hasClass('trigger')) {
+      next.parents('.slide').removeClass('processed').children('.result').remove();
     }
   });
 });
