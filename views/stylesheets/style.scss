@@ -80,13 +80,7 @@ $p: 'Georgia', 'Times', serif;
   
   // ----- Deck Backgrounds ----- //
   
-  &.on-slide-0, &.on-slide-11, &.on-slide-10, &.on-slide-12,
-  &.on-slide-17, &.on-slide-18, &.on-slide-19, &.on-slide-22,
-  &.on-slide-23, &.on-slide-29, &.on-slide-30, &.on-slide-31,
-  &.on-slide-32, &.on-slide-76, &.on-slide-83, &.on-slide-91,
-  &.on-slide-101, &.on-slide-102, &.on-slide-103, &.on-slide-113,
-  &.on-slide-126, &.on-slide-131, &.on-slide-132, &.on-slide-148,
-  &.on-slide-151 {
+  &.on-slide-0, &.on-slide-1, &.on-slide-11, &.on-slide-10, &.on-slide-12, &.on-slide-17, &.on-slide-18, &.on-slide-19, &.on-slide-22, &.on-slide-23, &.on-slide-29, &.on-slide-30, &.on-slide-31, &.on-slide-32, &.on-slide-76, &.on-slide-83, &.on-slide-91, &.on-slide-101, &.on-slide-102, &.on-slide-103, &.on-slide-113, &.on-slide-126, &.on-slide-131, &.on-slide-132, &.on-slide-148, &.on-slide-151 {
     background: #fefdfb;
   }
   
@@ -134,7 +128,7 @@ $p: 'Georgia', 'Times', serif;
     padding-top: 15px;
     width: 38%;
     li {
-      @include transition(opacity 0.5s ease-in-out);
+      @include transition(opacity 0.3s ease-in-out);
       border-top: 2px solid #bbb5b0;
       font-size: 3em;
       line-height: 1.3em;
@@ -176,6 +170,9 @@ $p: 'Georgia', 'Times', serif;
           }
         }
       }
+      &.credits li {
+        font-size: 3em;
+      }
     }
   }
   var {
@@ -193,6 +190,23 @@ $p: 'Georgia', 'Times', serif;
     color: #847f7c;
     font: bold 3em $h2;
     padding-left: 40px;
+  }
+  .me {
+    background: rgba(44,42,38,0.9);
+    padding: 20px;
+    h3 {
+      font-size: 6em;
+      margin: 0;
+      text-align: right;
+    }
+    p {
+      font-size: 4.5em;
+      text-align: right;
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
   }
   ::-moz-selection{
     background: #bab4af;
@@ -217,7 +231,7 @@ $p: 'Georgia', 'Times', serif;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
     color: #fff;
-    font: normal 2.5em/1.5em $monospace;
+    font: normal 2.5em/34px $monospace;
     padding: 20px;
     &.initial,
     &.result {
@@ -227,6 +241,14 @@ $p: 'Georgia', 'Times', serif;
       right: 20px;
       top: 170px;
       width: 58%;
+    }
+    &.result {
+      @include transform(scale(0.85));
+      opacity: 0;
+      &.reveal {
+        @include transform(scale(1));
+        opacity: 1;
+      }
     }
     &.result:after {
       background: url(../images/icn-arrow.png) no-repeat;
@@ -250,7 +272,7 @@ $p: 'Georgia', 'Times', serif;
     pre.initial {
       @include transform(translate(-100%, -10px));
       background: #bbb5b0;
-      border: 0;
+      border-color: #bbb5b0;
       box-shadow: none;
       color: $base;
       font-size: 2em;
@@ -279,6 +301,9 @@ $p: 'Georgia', 'Times', serif;
   }
   .comment {
     color: #756f6b;
+    mark {
+      color: #756f6b;
+    }
   }
   .filter {
     color: $highlight;
@@ -310,6 +335,10 @@ $p: 'Georgia', 'Times', serif;
       color: #641700;
     }
   }
+  .sh_keyword { color: #d0b089; }
+  .sh_type { color: #a1db7e; }
+  .sh_string { color: #a1db7e; }
+  .sh_symbol { color: #e27979; }
   
   // ----- Base Slides & Transitions ----- //
   
@@ -471,6 +500,11 @@ $p: 'Georgia', 'Times', serif;
       text-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
   }
+  .title-me {
+    @extend .cover;
+    background-image: url(../images/title-me.jpg);
+    background-position: center top;
+  }
   .title-quote {
     @extend .cover;
     background-image: url(../images/title-quote.jpg);
@@ -503,65 +537,4 @@ $p: 'Georgia', 'Times', serif;
   .title-base-4 h1 {
     line-height: 1em;
   }
-}
-
-
-
-//----------------------------------------------------------
-//  Base deck.js Style
-//----------------------------------------------------------
-
-// ----- Status Plugin ----- //
-
-.deck-container .deck-status {
-  bottom: 10px;
-  color: #888;
-  margin: 0;
-  position: absolute;
-  right: 5px;
-  z-index: 3;
-}
-@media print {
-  .deck-status {
-    display: none;
-  }
-}
-
-// ----- GoTo Plugin ----- //
-
-.deck-container {	
-	.goto-form {
-		border-radius: 10px;
-		position: absolute;
-		z-index: 3;
-		bottom: 10px;
-		left: 50%;
-		height: 1.75em;
-		margin: 0 0 0 -7.125em;
-		line-height: 1.75em;
-		padding: 0.625em;
-		display: none;
-		background: #ccc;
-		overflow: hidden;
-		label {
-			font-weight: bold;
-		}
-		label, input {
-			display: inline-block;
-			font-family: inherit;
-		}
-	}
-}
-.deck-goto .goto-form {
-	display: block;
-}
-#goto-slide {
-	width: 4.375em;
-	margin: 0 0.625em;
-	height: 1.4375em;
-}
-@media print {
-	.goto-form, #goto-slide {
-		display: none !important;
-	}
 }

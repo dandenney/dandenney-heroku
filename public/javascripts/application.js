@@ -1,4 +1,14 @@
 function convertHaml(input, options, root) {
+  
+  function reveal(selector) {
+    root.find('.result').addClass('reveal');
+  }
+  function addResult(response) {
+    root.addClass('processed').append('<pre class="result sh_html">' + response + '</pre>');
+    setTimeout(function(){reveal('#codeschool')}, 100);
+    sh_highlightDocument();
+  }
+  
   $.ajax({
     url: '/process',
     type: 'POST',
@@ -8,15 +18,17 @@ function convertHaml(input, options, root) {
       // loading
     },
     error: function(jqXHR, textStatus) {
-      root.addClass('processed').append('<pre class="result">' + textStatus + '</pre>');
+      addResult(textStatus);
     },
     success: function(html) {
-      root.addClass('processed').append('<pre class="result">' + html + '</pre>');
+      addResult(html);
     }
   });
+  
 }
 
 $(function(){
+  
   $.deck('.slide');
   
   $(document).bind('deck.change', function(e, from, to) {
@@ -35,4 +47,5 @@ $(function(){
       next.parents('.slide').removeClass('processed').children('.result').remove();
     }
   });
+  
 });
