@@ -193,16 +193,6 @@
             It's only part time.
       
     %section.slide
-      %h2 Multiple <em>Classes</em>
-      %ul
-        %li.slide More than one class may be added in this manner
-        %li.slide.trigger
-      %pre.initial
-        :preserve
-          %<span class="tag">p</span><mark class="mark-1"><span class="id">.class-1.class-2</span></mark>
-            Hey kid, you want a toothpick?
-      
-    %section.slide
       %h2 <em>Divs</em> Aplenty
       %ul
         %li.slide <var>div</var> tags can be denoted like other tags
@@ -221,16 +211,27 @@
     %section.slide
       %h2 Nesting
       %ul
-        %li Like content, use two spaces to nest tags within other tags
+        %li Like content, use spaces or tabs to next tags within other tags
         %li.slide.trigger
       %pre.initial
         :preserve
           %<span class="tag">header</span>
-            %<span class="tag">h1</span> Bum Bum Bum
-            %<span class="tag">h2</span> Dum Dum Dum
+            %<span class="tag">h1</span> Hey Kid
+            %<span class="tag">h2</span> You want a toothpick?
             %<span class="tag">nav</span>
               %<span class="tag">a</span>(<span class="attr">href="#" title="A Link"</span>)
-                Wub Wub Wub
+                Toothpick Emporium
+                
+    %section.slide
+      %h2 Nesting
+      %ul
+        %li.slide Haml will throw an error if you are not consistent with spacing
+        %li.slide.trigger
+      %pre.initial
+        :preserve
+          %<span class="tag">header</span>
+              %<span class="tag">h1</span> Hey Kid
+            <mark class="mark-1">%<span class="tag">h2</span> You want a toothpick?</mark>
       
     %section.slide
       %h2 Comments (<em>HTML</em>)
