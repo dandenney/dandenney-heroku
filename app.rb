@@ -3,10 +3,6 @@ require 'haml'
 require 'rdiscount'
 require 'sass'
 
-configure do
-  # might not need anything here
-end
-
 
 # Helpers
 

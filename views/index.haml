@@ -58,16 +58,7 @@
         %li.slide Replacement for templating systems like ERB, PHP, and ASP
         %li.slide Follows DRY principles
         %li.slide Strict indenting and whitespace-sensitive
-    
-    %section.slide.title-3
-      %h1 Pre-reqs
-    
-    %section.slide.title-base.title-base-2
-      %h1 HTML
-      
-    %section.slide.title-4
-      %h1 Cumbersome<br />HTML?
-      
+        
     %section.slide
       %h2 The <em>First</em> Level
       %ul
@@ -79,8 +70,17 @@
             %<span class="tag">head</span>
               %<span class="tag">title</span> A Real Human Being
             %<span class="tag">body</span>
-              <span class="id">#id.class</span>
-                %<span class="tag">h1</span><span class="id">.class</span> And a Real Hero
+              <span class="id">#content.group</span>
+                %<span class="tag">h1</span><span class="id">.headline</span> And a Real Hero
+    
+    %section.slide.title-3
+      %h1 Pre-reqs
+    
+    %section.slide.title-base.title-base-2
+      %h1 HTML
+      
+    %section.slide.title-4
+      %h1 Cumbersome<br />HTML?
     
     / Section - History
     
@@ -187,9 +187,9 @@
         %li.slide.trigger
       %pre.initial
         :preserve
-          %<span class="tag">p</span><mark class="mark-1">(<span class="attr">id="id-1" class="class"</span>)</mark>
+          %<span class="tag">p</span><mark class="mark-1">(<span class="attr">id="header" class="group"</span>)</mark>
             Is that dangerous?
-          %<span class="tag">p</span><mark class="mark-2"><span class="id">#id-2.class</span></mark>
+          %<span class="tag">p</span><mark class="mark-2"><span class="id">#footer.group</span></mark>
             It's only part time.
       
     %section.slide
@@ -201,17 +201,17 @@
         %li.slide.trigger
       %pre.initial
         :preserve
-          <mark class="mark-1">%<span class="tag">div</span><span class="id">.class</span></mark>
+          <mark class="mark-1">%<span class="tag">div</span><span class="id">.group</span></mark>
             Sorry about the noise.
-          <mark class="mark-2"><span class="id">.class</span></mark>
+          <mark class="mark-2"><span class="id">.group</span></mark>
             I was gonna call the cops.
-          <mark class="mark-3"><span class="id">.class</span>(<span class="attr">rel="lb"</span>)</mark>
+          <mark class="mark-3"><span class="id">.group</span>(<span class="attr">rel="lb"</span>)</mark>
             I wish you would.
       
     %section.slide
       %h2 Nesting
       %ul
-        %li Like content, use spaces or tabs to next tags within other tags
+        %li Like content, use spaces or tabs to nest tags within other tags
         %li.slide.trigger
       %pre.initial
         :preserve

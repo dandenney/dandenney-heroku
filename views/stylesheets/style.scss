@@ -80,7 +80,7 @@ $p: 'Georgia', 'Times', serif;
   
   // ----- Deck Backgrounds ----- //
   
-  &.on-slide-0, &.on-slide-1, &.on-slide-11, &.on-slide-10, &.on-slide-12, &.on-slide-17, &.on-slide-18, &.on-slide-19, &.on-slide-22, &.on-slide-23, &.on-slide-29, &.on-slide-30, &.on-slide-31, &.on-slide-32, &.on-slide-77, &.on-slide-84, &.on-slide-92, &.on-slide-102, &.on-slide-103, &.on-slide-104, &.on-slide-114, &.on-slide-127, &.on-slide-132, &.on-slide-133, &.on-slide-149, &.on-slide-152 {
+  &.on-slide-0, &.on-slide-1, &.on-slide-11, &.on-slide-10, &.on-slide-12, &.on-slide-19, &.on-slide-20, &.on-slide-21, &.on-slide-22, &.on-slide-23, &.on-slide-29, &.on-slide-30, &.on-slide-31, &.on-slide-32, &.on-slide-77, &.on-slide-84, &.on-slide-92, &.on-slide-102, &.on-slide-103, &.on-slide-104, &.on-slide-114, &.on-slide-127, &.on-slide-132, &.on-slide-133, &.on-slide-149, &.on-slide-152 {
     background: #fefdfb;
   }
   
@@ -522,5 +522,33 @@ $p: 'Georgia', 'Times', serif;
   }
   .title-base-4 h1 {
     line-height: 1em;
+  }
+}
+
+
+
+//--------------------------------------------------------
+//   Errors
+//--------------------------------------------------------
+
+.error {
+  background: $title-light;
+  text-align: center;
+  h3 {
+    color: $highlight;
+    font: bold 2.4em $h2;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 1.8em;
+    margin: 0;
+    a {
+  		color: #607890;
+  		&:hover,
+  		&:focus {
+  		  background: rgba(73,92,111,0.2);
+  			color: #495c6f;
+  		}
+  	}
   }
 }
