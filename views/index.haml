@@ -65,7 +65,7 @@
       %pre.initial
         :preserve
           !!! 5
-          %<span class="tag">html</span>{<span class="attr">lang: 'en'</span>}
+          %<span class="tag">html</span>(<span class="attr">lang="en"</span>)
             %<span class="tag">head</span>
               %<span class="tag">title</span> A Real Human Being
             %<span class="tag">body</span>
@@ -159,22 +159,25 @@
     %section.slide
       %h2 Attributes
       %ul
-        %li.slide Attributes are added via Ruby hashes
+        %li.slide Attributes can be added via Ruby hash
+        %li.slide Alternatively, normal attribute assignment works inside parentheses
         %li.slide.trigger
       %pre.initial
         :preserve
-          %<span class="tag">a</span><mark class="mark-1">{<span class="attr">href: 'http://haml-lang.org', title: 'A Link'</span>}</mark>
+          %<span class="tag">p</span><mark class="mark-1">{<span class="attr">rel: 'lb', title: 'A Link'</span>}</mark>
+            What do you do?
+          %<span class="tag">p</span><mark class="mark-2">(<span class="attr">rel="lb" title="A Link"</span>)</mark>
             I drive, for movies.
       
     %section.slide
       %h2 IDs <em>&amp;</em> Classes
       %ul
-        %li.slide Classes and IDs may also be added via hash
+        %li.slide Classes and IDs may also be added this way
         %li.slide More commonly, though, they're denoted with a CSS selector-like shorthand
         %li.slide.trigger
       %pre.initial
         :preserve
-          %<span class="tag">p</span><mark class="mark-1">{<span class="attr">id: 'id-1', class: 'class'</span>}</mark>
+          %<span class="tag">p</span><mark class="mark-1">(<span class="attr">id="id-1" class="class"</span>)</mark>
             Is that dangerous?
           %<span class="tag">p</span><mark class="mark-2"><span class="id">#id-2.class</span></mark>
             It's only part time.
@@ -202,7 +205,7 @@
             Sorry about the noise.
           <mark class="mark-2"><span class="id">.class</span></mark>
             I was gonna call the cops.
-          <mark class="mark-3"><span class="id">.class</span>{<span class="attr">rel: 'lightbox'</span>}</mark>
+          <mark class="mark-3"><span class="id">.class</span>(<span class="attr">rel="lb"</span>)</mark>
             I wish you would.
       
     %section.slide
@@ -216,7 +219,7 @@
             %<span class="tag">h1</span> Bum Bum Bum
             %<span class="tag">h2</span> Dum Dum Dum
             %<span class="tag">nav</span>
-              %<span class="tag">a</span>{<span class="attr">href: '#', title: 'A Link'</span>}
+              %<span class="tag">a</span>(<span class="attr">href="#" title="A Link"</span>)
                 Wub Wub Wub
       
     %section.slide
@@ -466,7 +469,7 @@
       %pre.initial
         :preserve
           !!! 5
-          %<span class="tag">html</span>{<span class="attr">lang: 'en'</span>}
+          %<span class="tag">html</span>(<span class="attr">lang="en"</span>)
             %<span class="tag">head</span>
               %<span class="tag">title</span> A Real Human Being
             %<span class="tag">body</span>

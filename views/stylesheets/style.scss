@@ -80,7 +80,7 @@ $p: 'Georgia', 'Times', serif;
   
   // ----- Deck Backgrounds ----- //
   
-  &.on-slide-0, &.on-slide-1, &.on-slide-11, &.on-slide-10, &.on-slide-12, &.on-slide-17, &.on-slide-18, &.on-slide-19, &.on-slide-22, &.on-slide-23, &.on-slide-29, &.on-slide-30, &.on-slide-31, &.on-slide-32, &.on-slide-76, &.on-slide-83, &.on-slide-91, &.on-slide-101, &.on-slide-102, &.on-slide-103, &.on-slide-113, &.on-slide-126, &.on-slide-131, &.on-slide-132, &.on-slide-148, &.on-slide-151 {
+  &.on-slide-0, &.on-slide-1, &.on-slide-11, &.on-slide-10, &.on-slide-12, &.on-slide-17, &.on-slide-18, &.on-slide-19, &.on-slide-22, &.on-slide-23, &.on-slide-29, &.on-slide-30, &.on-slide-31, &.on-slide-32, &.on-slide-77, &.on-slide-84, &.on-slide-92, &.on-slide-102, &.on-slide-103, &.on-slide-104, &.on-slide-114, &.on-slide-127, &.on-slide-132, &.on-slide-133, &.on-slide-149, &.on-slide-152 {
     background: #fefdfb;
   }
   
@@ -145,7 +145,7 @@ $p: 'Georgia', 'Times', serif;
         text-align: left;
       }
       pre {
-        border-width: 4px;
+        border: 0;
         font-size: 0.8em;
         margin-top: 10px;
         padding: 10px 20px;
@@ -308,27 +308,13 @@ $p: 'Georgia', 'Times', serif;
   .filter {
     color: $highlight;
   }
-  &.on-slide-40 .initial, &.on-slide-43 .initial, &.on-slide-48 .initial,
-  &.on-slide-51 .initial, &.on-slide-52 .initial, &.on-slide-55 .initial,
-  &.on-slide-58 .initial, &.on-slide-59 .initial, &.on-slide-60 .initial,
-  &.on-slide-67 .initial, &.on-slide-70 .initial, &.on-slide-73 .initial,
-  &.on-slide-74 .initial, &.on-slide-81 .initial, &.on-slide-85 .initial,
-  &.on-slide-86 .initial, &.on-slide-89 .initial, &.on-slide-105 .initial,
-  &.on-slide-108 .initial, &.on-slide-115 .initial, &.on-slide-118 .initial,
-  &.on-slide-121 .initial, &.on-slide-124 .initial, {
+  &.on-slide-40 .initial, &.on-slide-43 .initial, &.on-slide-48 .initial, &.on-slide-49 .initial, &.on-slide-52 .initial, &.on-slide-53 .initial, &.on-slide-56 .initial, &.on-slide-59 .initial, &.on-slide-60 .initial, &.on-slide-61 .initial, &.on-slide-68 .initial, &.on-slide-71 .initial, &.on-slide-74 .initial, &.on-slide-75 .initial, &.on-slide-82 .initial, &.on-slide-86 .initial, &.on-slide-87 .initial, &.on-slide-90 .initial, &.on-slide-106 .initial, &.on-slide-109 .initial, &.on-slide-116 .initial, &.on-slide-119 .initial, &.on-slide-122 .initial, &.on-slide-125 .initial, {
     color: #756f6b;
     mark, span {
       color: #756f6b;
     }
   }
-  &.on-slide-40 .mark-1, &.on-slide-43 .mark-1, &.on-slide-48 .mark-1,
-  &.on-slide-51 .mark-1, &.on-slide-52 .mark-2, &.on-slide-55 .mark-1,
-  &.on-slide-58 .mark-1, &.on-slide-59 .mark-2, &.on-slide-60 .mark-3,
-  &.on-slide-67 .mark-1, &.on-slide-70 .mark-1, &.on-slide-73 .mark-1,
-  &.on-slide-74 .mark-2, &.on-slide-81 .mark-1, &.on-slide-85 .mark-1,
-  &.on-slide-86 .mark-2, &.on-slide-89 .mark-1, &.on-slide-105 .mark-1,
-  &.on-slide-108 .mark-1, &.on-slide-115 .mark-1, &.on-slide-118 .mark-1,
-  &.on-slide-121 .mark-1, &.on-slide-124 .mark-1, {
+  &.on-slide-40 .mark-1, &.on-slide-43 .mark-1, &.on-slide-48 .mark-1, &.on-slide-49 .mark-2, &.on-slide-52 .mark-1, &.on-slide-53 .mark-2, &.on-slide-56 .mark-1, &.on-slide-59 .mark-1, &.on-slide-60 .mark-2, &.on-slide-61 .mark-3, &.on-slide-68 .mark-1, &.on-slide-71 .mark-1, &.on-slide-74 .mark-1, &.on-slide-75 .mark-2, &.on-slide-82 .mark-1, &.on-slide-86 .mark-1, &.on-slide-87 .mark-2, &.on-slide-90 .mark-1, &.on-slide-106 .mark-1, &.on-slide-109 .mark-1, &.on-slide-116 .mark-1, &.on-slide-119 .mark-1, &.on-slide-122 .mark-1, &.on-slide-125 .mark-1, {
     background: #ffdbd0;
     color: #641700 !important;
     span {
