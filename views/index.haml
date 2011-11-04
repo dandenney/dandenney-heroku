@@ -7,6 +7,16 @@
     %link{href: 'stylesheets/deck.core.css', rel: 'stylesheet', type: 'text/css'}
     %link{href: 'stylesheets/style.css', rel: 'stylesheet', type: 'text/css'}
     %script{src: 'javascripts/modernizr.custom.js', type: 'text/javascript'}
+    
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-9731427-2']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
   
   %body.deck-container
   
@@ -33,7 +43,7 @@
         %li.slide The Install
   
     %section.slide.title-quote
-      %blockquote The three chief virtues of a programmer are: Laziness, Impatience and Hubris.
+      %blockquote The three chief virtues of a<br />programmer are: Laziness,<br /> Impatience and Hubris.
       %p Larry Wall, co-author <a href="http://shop.oreilly.com/product/9780596000271.do">Programming Perl</a>
   
     %section.slide.title-2
@@ -536,7 +546,7 @@
           %h3 This Presentation
           %p &bull; <a href="http://addinghaml.heroku.com">addinghaml.heroku.com</a>
           %p &bull; <a href="https://github.com/nickawalsh/addinghaml">github.com/nickawalsh/addinghaml</a>
-          %p &bull; <a href="http://sinatrarb.com">Sinatra</a> &amp; <a href="http://imakewebthings.github.com/deck.js/">deck.js</a>
+          %p &bull; <a href="http://sinatrarb.com">Sinatra</a>, <a href="http://imakewebthings.github.com/deck.js/">deck.js</a>, &amp; <a href="http://shjs.sourceforge.net/">SHJS</a>
         %li
           %h3 Images
           %p &bull; <a href="http://flickr.com/photos/nypl/sets/72157610903925533/">1930s New York (New York Public Library)</a>
