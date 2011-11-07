@@ -80,7 +80,7 @@ $p: 'Georgia', 'Times', serif;
   
   // ----- Deck Backgrounds ----- //
   
-  &.on-slide-0, &.on-slide-1, &.on-slide-11, &.on-slide-10, &.on-slide-12, &.on-slide-19, &.on-slide-20, &.on-slide-21, &.on-slide-22, &.on-slide-23, &.on-slide-29, &.on-slide-30, &.on-slide-31, &.on-slide-32, &.on-slide-77, &.on-slide-84, &.on-slide-92, &.on-slide-102, &.on-slide-103, &.on-slide-104, &.on-slide-114, &.on-slide-127, &.on-slide-132, &.on-slide-133, &.on-slide-149, &.on-slide-152 {
+  &.on-slide-0, &.on-slide-1, &.on-slide-3, &.on-slide-4, &.on-slide-5, &.on-slide-12, &.on-slide-13, &.on-slide-14, &.on-slide-15, &.on-slide-16, &.on-slide-22, &.on-slide-23, &.on-slide-24, &.on-slide-25, &.on-slide-70, &.on-slide-77, &.on-slide-85, &.on-slide-92, &.on-slide-93, &.on-slide-94, &.on-slide-104, &.on-slide-121, &.on-slide-137, &.on-slide-139 {
     background: #fefdfb;
   }
   
@@ -231,7 +231,7 @@ $p: 'Georgia', 'Times', serif;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
     color: #fff;
-    font: normal 2.5em/34px $monospace;
+    font: normal 2.5em/1.5em $monospace;
     padding: 20px;
     &.initial,
     &.result {
@@ -275,7 +275,6 @@ $p: 'Georgia', 'Times', serif;
       border-color: #bbb5b0;
       box-shadow: none;
       color: $base;
-      font-size: 2em;
       right: -20px;
       width: 50%;
       mark, span {
@@ -308,13 +307,13 @@ $p: 'Georgia', 'Times', serif;
   .filter {
     color: $highlight;
   }
-  &.on-slide-40 .initial, &.on-slide-43 .initial, &.on-slide-48 .initial, &.on-slide-49 .initial, &.on-slide-52 .initial, &.on-slide-53 .initial, &.on-slide-56 .initial, &.on-slide-57 .initial, &.on-slide-58 .initial, &.on-slide-63 .initial, &.on-slide-68 .initial, &.on-slide-71 .initial, &.on-slide-74 .initial, &.on-slide-75 .initial, &.on-slide-82 .initial, &.on-slide-86 .initial, &.on-slide-87 .initial, &.on-slide-90 .initial, &.on-slide-106 .initial, &.on-slide-109 .initial, &.on-slide-116 .initial, &.on-slide-119 .initial, &.on-slide-122 .initial, &.on-slide-125 .initial, {
+  &.on-slide-33 .initial, &.on-slide-36 .initial, &.on-slide-41 .initial, &.on-slide-42 .initial, &.on-slide-45 .initial, &.on-slide-46 .initial, &.on-slide-49 .initial, &.on-slide-50 .initial, &.on-slide-51 .initial, &.on-slide-56 .initial, &.on-slide-61 .initial, &.on-slide-64 .initial, &.on-slide-67 .initial, &.on-slide-68 .initial, &.on-slide-75 .initial, &.on-slide-79 .initial, &.on-slide-80 .initial, &.on-slide-83 .initial, &.on-slide-96 .initial, &.on-slide-99 .initial, &.on-slide-106 .initial, &.on-slide-109 .initial, &.on-slide-112 .initial, &.on-slide-115 .initial, {
     color: #756f6b;
     mark, span {
       color: #756f6b;
     }
   }
-  &.on-slide-40 .mark-1, &.on-slide-43 .mark-1, &.on-slide-48 .mark-1, &.on-slide-49 .mark-2, &.on-slide-52 .mark-1, &.on-slide-53 .mark-2, &.on-slide-56 .mark-1, &.on-slide-57 .mark-2, &.on-slide-58 .mark-3, &.on-slide-63 .mark-1, &.on-slide-68 .mark-1, &.on-slide-71 .mark-1, &.on-slide-74 .mark-1, &.on-slide-75 .mark-2, &.on-slide-82 .mark-1, &.on-slide-86 .mark-1, &.on-slide-87 .mark-2, &.on-slide-90 .mark-1, &.on-slide-106 .mark-1, &.on-slide-109 .mark-1, &.on-slide-116 .mark-1, &.on-slide-119 .mark-1, &.on-slide-122 .mark-1, &.on-slide-125 .mark-1, {
+  &.on-slide-33 .mark-1, &.on-slide-36 .mark-1, &.on-slide-41 .mark-1, &.on-slide-42 .mark-2, &.on-slide-45 .mark-1, &.on-slide-46 .mark-2, &.on-slide-49 .mark-1, &.on-slide-50 .mark-2, &.on-slide-51 .mark-3, &.on-slide-56 .mark-1, &.on-slide-61 .mark-1, &.on-slide-64 .mark-1, &.on-slide-67 .mark-1, &.on-slide-68 .mark-2, &.on-slide-75 .mark-1, &.on-slide-79 .mark-1, &.on-slide-80 .mark-2, &.on-slide-83 .mark-1, &.on-slide-96 .mark-1, &.on-slide-99 .mark-1, &.on-slide-106 .mark-1, &.on-slide-109 .mark-1, &.on-slide-112 .mark-1, &.on-slide-115 .mark-1, {
     background: #ffdbd0;
     color: #641700 !important;
     span {
@@ -337,11 +336,11 @@ $p: 'Georgia', 'Times', serif;
 	  padding: 20px;
 	  position: absolute;
 	  right: 20px;
-	  -webkit-transition: -webkit-transform 0.8s ease-in-out;
-		-moz-transition: -moz-transform 0.8s ease-in-out;
-		-ms-transition: -ms-transform 0.8s ease-in-out;
-		-o-transition: -o-transform 0.8s ease-in-out;
-		transition: transform 0.8s ease-in-out;
+	  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+		-moz-transition: -moz-transform 0.4s ease-in-out;
+		-ms-transition: -ms-transform 0.4s ease-in-out;
+		-o-transition: -o-transform 0.4s ease-in-out;
+		transition: transform 0.4s ease-in-out;
 	  top: 20px;
 	  .slide {
 			position: relative;
@@ -391,6 +390,14 @@ $p: 'Georgia', 'Times', serif;
     @extend .cover;
     background-image: url(../images/title-2.jpg);
     background-position: center top;
+    h2 {
+      background: none;
+      border-top: 2px solid #bbb5b0;
+      margin-top: 30px;
+      padding: 30px 0 0 30px;
+      text-align: left;
+      width: 535px;
+    }
   }
   .title-3 {
     @extend .cover;
@@ -401,13 +408,22 @@ $p: 'Georgia', 'Times', serif;
       padding-top: 30px;
       text-align: right;
     }
+    h2 {
+      background: none;
+      border-top: 2px solid #bbb5b0;
+      color: $title-light;
+      float: right;
+      margin-top: 30px;
+      padding: 30px 15px 0 0;
+      text-align: right;
+      width: 545px;
+    }
   }
   .title-4 {
     @extend .cover;
     background-image: url(../images/title-4.jpg);
     h1 {
       color: $title-light;
-      font-size: 7em;
       padding-top: 70px;
       text-shadow: 0 2px #000;
     }
@@ -506,16 +522,6 @@ $p: 'Georgia', 'Times', serif;
       text-align: center;
       top: 50%;
     }
-  }
-  .title-base-1 h1 {
-    font-size: 8em;
-    line-height: 1.1em;
-    em {
-      background: $base;
-    }
-  }
-  .title-base-2 h1 {
-    font-size: 15em;
   }
   .title-base-3 h1 {
     font-size: 11em;
