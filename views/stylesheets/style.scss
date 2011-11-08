@@ -224,7 +224,7 @@ $p: 'Georgia', 'Times', serif;
     color: #fff;
   }
   pre {
-    background: #3f3b36;
+    background: #2c2925;
     border: 7px solid #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.25);
 		-webkit-box-sizing: border-box;
@@ -274,12 +274,12 @@ $p: 'Georgia', 'Times', serif;
       background: #bbb5b0;
       border-color: #bbb5b0;
       box-shadow: none;
-      color: $base;
+      color: #2c2925;
       right: -20px;
       width: 50%;
       mark, span {
         background: none;
-        color: $base;
+        color: #2c2925;
       }
     }
     li.slide {
@@ -336,11 +336,6 @@ $p: 'Georgia', 'Times', serif;
 	  padding: 20px;
 	  position: absolute;
 	  right: 20px;
-	  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-		-moz-transition: -moz-transform 0.4s ease-in-out;
-		-ms-transition: -ms-transform 0.4s ease-in-out;
-		-o-transition: -o-transform 0.4s ease-in-out;
-		transition: transform 0.4s ease-in-out;
 	  top: 20px;
 	  .slide {
 			position: relative;
@@ -356,10 +351,10 @@ $p: 'Georgia', 'Times', serif;
 		}
 	}
 	> .deck-previous {
-		@include transform(translate(-200%, 100%) rotate(45deg));
+		@include transform(translate(-200%));
 	}
 	> .deck-before {
-		@include transform(translate(-400%, 100%) rotate(45deg));
+		@include transform(translate(-400%));
 	}
 	> .deck-next {
 		@include transform(translate(200%));
