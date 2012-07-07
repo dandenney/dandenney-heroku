@@ -1,0 +1,167 @@
+/* ----- (Modified) Base deck.js Styles ----- */
+
+html {
+  font-size: 16px;
+	height: 100%;
+	overflow: hidden;
+}
+.deck-container {
+  font-size: 62.5%;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	.js & {
+		visibility:hidden;
+	}
+	.ready & {
+		visibility:visible;
+	}
+	.touch & {
+		-webkit-text-size-adjust:none;
+	}
+	
+	/* (Modified) Resets and base styles from HTML5 Boilerplate */
+	
+	div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, code, em, img, ins, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, form, label, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	  margin: 0;
+	  padding: 0;
+	  border: 0;
+	  font-size: 100%;
+	  font: inherit;
+	  vertical-align: baseline;
+	}
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section {
+	  display: block;
+	}
+	blockquote, q {
+		quotes:none;
+		&:before, &:after {
+			content:"";
+			content:none;
+		}
+	}
+	pre, code {
+		font-family:monospace, sans-serif;
+	}
+	a {
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
+		&:hover, &:active {
+			outline:none;
+		}
+	}
+	strong {
+		font-weight:bold;
+	}
+	
+	/* End HTML5 Boilerplate adaptations */
+
+	img, iframe, video {
+		display:block;
+		max-width:100%;
+	}
+	video, iframe, img {
+		display:block;
+		margin:0 auto;
+	}
+	pre {
+		white-space:pre;
+		white-space:pre-wrap;
+		word-wrap:break-word;
+	}
+	em {
+		font-style:normal;
+	}
+	li {
+		vertical-align:middle;
+	}
+	&.deck-loading {
+		display:none;
+	}
+}
+.deck-before, .deck-previous, .deck-next, .deck-after {
+	position:absolute;
+	left:-999em;
+	top:-999em;
+}
+.deck-current {
+	z-index:2;
+}
+.slide .slide {
+	visibility:hidden;
+	position:static;
+	min-height:0;
+}
+.deck-child-current {
+	position:static;
+	z-index:2;
+	.slide {
+		visibility:hidden;
+	}
+	.deck-previous, .deck-before, .deck-current {
+		visibility:visible;
+	}
+}
+body.deck-container {
+	overflow:visible;
+}
+@media print {
+  * {
+  	background: transparent !important;
+  	color: black !important;
+  	text-shadow: none !important;
+  	filter:none !important;
+  	-ms-filter: none !important;
+  	-webkit-box-reflect:none !important;
+  	-moz-box-reflect:none !important;
+  	-webkit-box-shadow:none !important;
+  	-moz-box-shadow:none !important;
+  	box-shadow:none !important;
+  	:before, :after {
+  		display:none !important;
+  	}
+  } 
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } 
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+ 	.slide {
+		position:static !important;
+		visibility:visible !important;
+		display:block !important;
+		-webkit-transform:none !important;
+		-moz-transform:none !important;
+		-o-transform:none !important;
+		-ms-transform:none !important;
+		transform:none !important;
+		opacity:1 !important;
+	}
+	h1 {
+		-webkit-transform:none !important;
+		-moz-transform:none !important;
+		-o-transform:none !important;
+		-ms-transform:none !important;
+		transform:none !important;
+		padding:0 !important;
+		position:static !important;
+	}
+	.deck-container > .slide {
+		page-break-after: always;
+	}
+	.deck-container {
+		width:100% !important;
+		height:auto !important;
+		padding:0 !important;
+		display:block !important;
+	}
+	script {
+		display:none;
+	}
+}
