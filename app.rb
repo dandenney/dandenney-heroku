@@ -33,8 +33,28 @@ get '/posts' do
   haml :"posts/index"
 end
 
+get '/posts/general/growing-with-envy' do
+  haml :"posts/general/growing-with-envy/index"
+end
+
 get '/posts/general/rebuilding' do
   haml :"posts/general/rebuilding/index"
+end
+
+get '/posts/general/fluid' do
+  haml :"posts/general/fluid/index"
+end
+
+get '/posts/front-end-dev/HTML-but-with-an-a-and-less-code' do
+  haml :"posts/front-end-dev/HTML-but-with-an-a-and-less-code/index"
+end
+
+get '/posts/front-end-dev/a-sass-noob-using-math-for-flexible-widths' do
+  haml :"posts/front-end-dev/a-sass-noob-using-math-for-flexible-widths/index"
+end
+
+get '/posts/front-end-dev/sass-compass-pairing-with-michael-parenteau' do
+  haml :"posts/front-end-dev/sass-compass-pairing-with-michael-parenteau/index"
 end
 
 # Errors

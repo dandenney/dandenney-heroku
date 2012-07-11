@@ -354,6 +354,13 @@
       }
    }
 
+   .posts-main {
+
+      .wrapper a {
+         font-size: 1.5em;
+      }
+   }
+
    @media only screen and (min-width : 768px){ 
 
       /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -402,13 +409,17 @@
          POSTS 
       :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
       
-      .posts-main .wrapper {
-         overflow: hidden;
-      }
+      .posts-main {
 
-      .posts-main .wrapper > section {
-         float: left;
-         margin-right: 4em;
+         .wrapper {
+            overflow: hidden;
+         }
+
+         .wrapper > section {
+            float: left;
+            margin-right: 4em;
+         }
+
       }
 
    }
