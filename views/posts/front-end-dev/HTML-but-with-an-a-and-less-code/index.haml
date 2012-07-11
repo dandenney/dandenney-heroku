@@ -29,36 +29,34 @@
 			
 		%pre
 			%code
-				= preserve do
-					:escaped
-						!!! 5
-						%html{:lang => "en"}
-							%head
-								%meta(http-equiv='X-UA-Compatible" content="IE=edge,chrome=1')
-								%meta(charset='utf-8')
-								%meta(name='viewport' content='width=device-width,initial-scale=1')
-								%title "HTML, but with an A and less code"
-								%link(href="/stylesheets/screen.css" rel="stylesheet")
-							%body
+				:preserve
+					!!! 5
+					%html{:lang => "en"}
+						%head
+							%meta(http-equiv='X-UA-Compatible" content="IE=edge,chrome=1')
+							%meta(charset='utf-8')
+							%meta(name='viewport' content='width=device-width,initial-scale=1')
+							%title "HTML, but with an A and less code"
+							%link(href="/stylesheets/screen.css" rel="stylesheet")
+						%body
 
 		%p 
 			On save, Codekit does it's magic compiling and this is what gets created:
 
 		%pre
 			%code
-				= preserve do
-					:escaped
-						<!DOCTYPE html>
-						<html lang='en'>
-						  <head>
-						    <meta http-equiv='X-UA-Compatible" content="IE=edge,chrome=1'>
-						    <meta charset='utf-8'>
-						    <meta name="viewport" content="width=device-width,initial-scale=1">
-						    <title>"HTML, but with an A and less code"</title>
-						    <link href='/stylesheets/screen.css' rel='stylesheet'>
-						  </head>
-						  <body></body>
-						</html>
+				:escaped
+					<!DOCTYPE html>
+					<html lang='en'>
+					  <head>
+					    <meta http-equiv='X-UA-Compatible" content="IE=edge,chrome=1'>
+					    <meta charset='utf-8'>
+					    <meta name="viewport" content="width=device-width,initial-scale=1">
+					    <title>"HTML, but with an A and less code"</title>
+					    <link href='/stylesheets/screen.css' rel='stylesheet'>
+					  </head>
+					  <body></body>
+					</html>
 
 		%p 
 			It took a little bit to get there and to figure out the rules on indenting, but it is mighty clean code and I get the feeling that the &lt; and &gt; keys are going to be getting a little bit of a break as I work more in Haml.

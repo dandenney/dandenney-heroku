@@ -10,8 +10,7 @@
       <img src="http://dandenney.com/dev/explanation.png" alt="flexible math explanation">
     %p
       So, now that I’m working with Compass and Sass one of the first things that I want to take advantage of is the math. One of my biggest pain points with responsive web design is using the calculator for the conversions to fluid widths. It bugged me so much that I learned a bunch of javascript to make a smoother way of doing
-      = succeed "." do
-        %a{:href => "http://responsv.com/flexible-math"} flexible math
+      %a{:href => "http://responsv.com/flexible-math"} flexible math
     %p
       %strong> DISCLAIMER
       \: I am new to writing mixins. There may be much, much better ways to do this. I am just sharing my learning. So, if you know of a better way please pop it in the comments.
@@ -23,9 +22,8 @@
     %pre
       %code
         :preserve
-          
           @mixin flexible-width ($context, $target) {
-          width: (($target / $context) * 100%);
+            width: (($target / $context) * 100%);
           }
     %h2 What does that do?
     %p So, what this little mixin does is sets up “flexible-width”, which is made up of a context and a target. Then it divides them, leaving a decimal. Then it multiplies that decimal by 100%. (This took a little figuring out on where to put the ‘%’)
@@ -33,17 +31,15 @@
     %pre
       %code
         :preserve
-          
           .boom-dan-does-sass-now {
-          @include flexible-width (960, 320);
+            @include flexible-width (960, 320);
           }
     %p The actual compiled CSS is:
     %pre
       %code
         :preserve
-          
           .boom-dan-does-sass-now {
-          width: 33.333%;
+            width: 33.333%;
           }
     %h2 Boom!
     %p
@@ -61,10 +57,7 @@
     %pre
       %code
         :preserve
-          
           Sass::Script::Number.precision = 10
-
-
 
   - partial :'shared/footer'
 
