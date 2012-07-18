@@ -3,6 +3,7 @@ require 'sinatra'
 require 'haml'
 require 'rdiscount'
 require 'sass'
+require 'newrelic_rpm'
 
 
 # Helpers
