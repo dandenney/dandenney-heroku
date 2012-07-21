@@ -19,9 +19,16 @@ configure do
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.rb'))
 end
 
+# Makes SCSS compile to CSS, need to repeat for folders
+
 get '/stylesheets/:name.css' do
   content_type 'text/css', :charset => 'utf-8'
   scss(:"stylesheets/#{params[:name]}" ) 
+end
+
+get '/stylesheets/posts/front-end-dev/name.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  scss(:"stylesheets/posts/front-end-dev/#{params[:name]}" ) 
 end
 
 # Routing
@@ -34,29 +41,45 @@ get '/posts' do
   haml :"posts/index"
 end
 
-get '/posts/general/growing-with-envy' do
-  haml :"posts/general/growing-with-envy/index"
-end
+  # General Posts
 
-get '/posts/general/rebuilding' do
-  haml :"posts/general/rebuilding/index"
-end
+  get '/posts/general/growing-with-envy' do
+    haml :"posts/general/growing-with-envy"
+  end
 
-get '/posts/general/fluid' do
-  haml :"posts/general/fluid/index"
-end
+  get '/posts/general/rebuilding' do
+    haml :"posts/general/rebuilding"
+  end
 
-get '/posts/front-end-dev/HTML-but-with-an-a-and-less-code' do
-  haml :"posts/front-end-dev/HTML-but-with-an-a-and-less-code/index"
-end
+  get '/posts/general/fluid' do
+    haml :"posts/general/fluid"
+  end
 
-get '/posts/front-end-dev/a-sass-noob-using-math-for-flexible-widths' do
-  haml :"posts/front-end-dev/a-sass-noob-using-math-for-flexible-widths/index"
-end
+  # Front-End Dev Posts
 
-get '/posts/front-end-dev/sass-compass-pairing-with-michael-parenteau' do
-  haml :"posts/front-end-dev/sass-compass-pairing-with-michael-parenteau/index"
-end
+  get '/posts/front-end-dev/playing-with-css-hat' do
+    haml :"posts/front-end-dev/playing-with-css-hat"
+  end
+
+  get '/posts/front-end-dev/mondays-rock' do
+    haml :"posts/front-end-dev/mondays-rock"
+  end
+
+  get '/posts/front-end-dev/production-vs-shipping' do
+    haml :"posts/front-end-dev/production-vs-shipping"
+  end
+
+  get '/posts/front-end-dev/HTML-but-with-an-a-and-less-code' do
+    haml :"posts/front-end-dev/HTML-but-with-an-a-and-less-code"
+  end
+
+  get '/posts/front-end-dev/a-sass-noob-using-math-for-flexible-widths' do
+    haml :"posts/front-end-dev/a-sass-noob-using-math-for-flexible-widths"
+  end
+
+  get '/posts/front-end-dev/sass-compass-pairing-with-michael-parenteau' do
+    haml :"posts/front-end-dev/sass-compass-pairing-with-michael-parenteau"
+  end
 
 # Errors
 
