@@ -41,6 +41,10 @@ get '/work' do
   haml :work
 end
 
+get '/research' do
+  haml :research
+end
+
 get '/posts' do
   haml :"posts/index"
 end

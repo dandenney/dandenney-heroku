@@ -1,0 +1,22 @@
+- partial :'shared/page-open', :locals => {:title => "Dan Denney, a front-end developer"}
+
+%body.research
+
+  - partial :'shared/header'
+
+  %section.wrapper
+    
+    %h1 I read or check out a lot of stuff
+
+    %h2 Here is a stream of some of my recent finds.
+
+    %p
+      If you really want to stalk, er, find out what else I am consuming. I 
+      %a(href="https://www.evernote.com/pub/dandenney/consumed")stash it all in a public notebook 
+      on Evernote.
+    
+    <script id="feed-1342985594470232" type="text/javascript" src="http://rss.bloople.net/?url=https%3A%2F%2Fwww.evernote.com%2Fpub%2Fdandenney%2Fconsumed%2Ffeed&detail=20&showtitle=false&type=js&id=1342985594470232"></script>
+
+  - partial :'shared/footer'
+
+  - partial :'shared/javacripts'
