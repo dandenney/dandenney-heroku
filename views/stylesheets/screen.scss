@@ -291,7 +291,6 @@
 
    .columns-two {
     margin: 0 auto;
-    max-width: 90%;
     overflow: hidden;
     
     .column {
@@ -406,9 +405,10 @@
       }
 
       img {
-
+        
         &:hover {
-          @include opacity(1);
+          @include transition(all .25s linear);
+          @include transform(rotate(-5deg));
         }
       
       }
