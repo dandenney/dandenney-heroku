@@ -56,6 +56,7 @@
       color: $color-main;
       font-family: $font-base;
       font-size: 1em;
+      line-height: 1.4;
       font-weight: 400;
     }
 
@@ -63,6 +64,7 @@
       color: $color-title;
       font-family: $font-featured;
       font-weight: 700;
+      margin-bottom: 0;
     }
 
     h1 {
@@ -88,6 +90,16 @@
 
     h6 {
       font-size: .75em;
+    }
+
+    h1 + p {
+       margin-top: .4em;
+    }
+
+    h2 + p,
+    h3 + p,
+    h4 + p {
+       margin-top: .25rem;
     }
 
     a {
@@ -170,7 +182,7 @@
 
       nav {
         float: left;
-        margin-top: 1.5em;
+        margin-top: .75em;
       }
 
       .nav-item {
@@ -208,6 +220,11 @@
 
       nav {
         float: right;
+
+        li {
+          display: inline;
+          margin-left: .5em;
+        }
       }
 
       [data-icon]:before {
@@ -221,29 +238,7 @@
 
    .post {
       font-size: 1rem;
-      line-height: 1.4;
       margin: 2rem auto;
-      
-      h1 {
-         margin-bottom: 0;
-      }
-
-      h1 + p {
-         margin-top: .4em;
-      }
-
-      h2,
-      h3,
-      h4 {
-         margin-bottom: 0;
-      }
-
-      h2 + p,
-      h3 + p,
-      h4 + p {
-         margin-top: .25rem;
-      }
-   
    }
 
    .post-standard {     
@@ -294,6 +289,24 @@
       max-width: 90%;
    }
 
+   .columns-two {
+    margin: 0 auto;
+    max-width: 90%;
+    overflow: hidden;
+    
+    .column {
+      float: left;
+      padding-left: 2rem;
+      width: 50%;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    
+    }
+
+   }
+
    .columns-three {
       margin: 0 auto;
       max-width: 90%;
@@ -309,6 +322,23 @@
          margin-left: 0;
       }
    }
+
+   .inline-list {
+      list-style: none;
+
+      li {
+        display: inline-block;
+      }
+   }
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    QUICK HELPERS
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+  .space-top {
+    margin-top: 2rem;
+  }
+
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
    PAGE SPECIFIC 
@@ -359,6 +389,37 @@
       .wrapper a {
          font-size: 1.5em;
       }
+   
+   }
+
+   .badges {
+
+      a {
+        display: inline-block;
+
+        &:after {
+          display: none;
+        }
+
+      }
+
+      li {
+        @include border-radius(50%);
+        @include box-shadow(inset 0 0 1rem 0 rgba(#000000, .8), 1px 1px 0 0 #f9f9f9);
+        background: #2f2b2d;
+        border: .25rem solid #c78144;
+        overflow: hidden;
+        margin-right: 1em;
+        padding: .5rem .5rem .25rem .5rem;
+      }
+
+      img {
+
+        &:hover {
+          @include opacity(1);
+        }
+      
+      }
    }
 
    @media only screen and (min-width : 768px){ 
@@ -393,7 +454,8 @@
       /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
          POSTS 
       :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
-   
+
+         body,
          .post {
             font-size: 1.25rem;
          }

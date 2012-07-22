@@ -37,6 +37,10 @@ get '/' do
   haml :index
 end
 
+get '/work' do
+  haml :work
+end
+
 get '/posts' do
   haml :"posts/index"
 end
