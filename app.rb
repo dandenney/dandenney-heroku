@@ -13,6 +13,10 @@ helpers do
   alias_method :h, :escape_html
 end
 
+configure :production do
+  require 'newrelic_rpm'
+end
+
 configure do
   set :haml, {:format => :html5, :escape_html => true}
   set :scss, {:style => :compact, :debug_info => false}
