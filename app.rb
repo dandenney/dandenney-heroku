@@ -68,6 +68,10 @@ end
   end
 
   # Front-End Dev Posts
+  
+  get '/posts/front-end-dev/see-nick-preprocess' do
+    haml :"posts/front-end-dev/see-nick-preprocess"
+  end
 
   get '/posts/front-end-dev/playing-with-css-hat' do
     haml :"posts/front-end-dev/playing-with-css-hat"
