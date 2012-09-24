@@ -35,6 +35,11 @@ get '/stylesheets/posts/front-end-dev/name.css' do
   scss(:"stylesheets/posts/front-end-dev/#{params[:name]}" ) 
 end
 
+get '/stylesheets/posts/conferences/name.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  scss(:"stylesheets/posts/front-end-dev/#{params[:name]}" ) 
+end
+
 # Routing
 
 get '/' do
@@ -95,6 +100,12 @@ end
 
   get '/posts/front-end-dev/sass-compass-pairing-with-michael-parenteau' do
     haml :"posts/front-end-dev/sass-compass-pairing-with-michael-parenteau"
+  end
+
+# Conferences Posts
+  
+  get '/posts/conferences/circles-conference-2012' do
+    haml :"posts/conferences/circles-conference-2012"
   end
 
 # Errors

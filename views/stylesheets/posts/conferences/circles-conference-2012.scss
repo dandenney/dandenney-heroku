@@ -1,0 +1,58 @@
+@import "compass";
+@import "compass/css3";
+
+$color-base: #e7e5d8;
+$color-accent: #E44F29;
+
+body {
+	background: $color-accent;
+	font-size: 14px;
+}
+
+.container {
+	background: #fff;
+	margin: 0 auto;
+	max-width: 700px;
+	padding: 1.5em;
+}
+
+.circles-talks {
+	margin: 130px 0 40px 0;
+	padding: 0;
+	li {
+		background: #fff;
+		list-style: none;
+		margin: 0;
+		padding: 1em 0 130px 0;
+		.container {
+			background: none;
+		}
+		h4 {
+			margin-top: 0;
+			text-align: center;
+		}
+		&:nth-child(odd) {
+			background: $color-base;
+			.circles-speaker {
+				background: $color-base;
+			}
+		}
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+	.circles-speaker {
+		@include border-radius(50%);
+		background: #fff;
+		height: 240px;
+		margin: -160px auto 0 auto;
+		padding: 10px;
+		width: 240px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		@include border-radius(3em);
+	}
+}
