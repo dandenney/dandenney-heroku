@@ -74,6 +74,10 @@ end
 
   # Front-End Dev Posts
   
+  get '/posts/front-end-dev/im-down-with-svg' do
+    haml :"posts/front-end-dev/im-down-with-svg"
+  end
+
   get '/posts/front-end-dev/see-nick-preprocess' do
     haml :"posts/front-end-dev/see-nick-preprocess"
   end
