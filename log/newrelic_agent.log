@@ -244,3 +244,13 @@
 [09/30/12 12:42:32 -0400 Dans-MacBook-Pro.local (13496)] WARN : Agent configured not to send data in this environment - edit newrelic.yml to change this
 [09/30/12 12:42:32 -0400 Dans-MacBook-Pro.local (13496)] INFO : New Relic Ruby Agent 3.4.2 Initialized: pid = 13496
 [09/30/12 12:42:32 -0400 Dans-MacBook-Pro.local (13496)] INFO : Agent Log at /Users/dandenney/Documents/repos/dandenney/dandenney-heroku/log/newrelic_agent.log
+[09/30/12 12:50:17 -0400 Dans-MacBook-Pro.local (13671)] INFO : Dispatcher: sinatra
+[09/30/12 12:50:17 -0400 Dans-MacBook-Pro.local (13671)] INFO : Application: My Application
+[09/30/12 12:50:17 -0400 Dans-MacBook-Pro.local (13671)] WARN : Agent configured not to send data in this environment - edit newrelic.yml to change this
+[09/30/12 12:50:17 -0400 Dans-MacBook-Pro.local (13671)] INFO : New Relic Ruby Agent 3.4.2 Initialized: pid = 13671
+[09/30/12 12:50:17 -0400 Dans-MacBook-Pro.local (13671)] INFO : Agent Log at /Users/dandenney/Documents/repos/dandenney/dandenney-heroku/log/newrelic_agent.log
+[09/30/12 17:01:12 -0400 Dans-MacBook-Pro.local (14349)] INFO : Dispatcher: sinatra
+[09/30/12 17:01:12 -0400 Dans-MacBook-Pro.local (14349)] INFO : Application: My Application
+[09/30/12 17:01:12 -0400 Dans-MacBook-Pro.local (14349)] WARN : Agent configured not to send data in this environment - edit newrelic.yml to change this
+[09/30/12 17:01:12 -0400 Dans-MacBook-Pro.local (14349)] INFO : New Relic Ruby Agent 3.4.2 Initialized: pid = 14349
+[09/30/12 17:01:12 -0400 Dans-MacBook-Pro.local (14349)] INFO : Agent Log at /Users/dandenney/Documents/repos/dandenney/dandenney-heroku/log/newrelic_agent.log

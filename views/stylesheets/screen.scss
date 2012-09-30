@@ -289,38 +289,41 @@
       max-width: 90%;
    }
 
-   .columns-two {
-    margin: 0 auto;
-    overflow: hidden;
-    
-    .column {
-      float: left;
-      padding-left: 2rem;
-      width: 50%;
+   @media screen and (min-width: 768px) {
 
-      &:first-child {
-        padding-left: 0;
-      }
-    
-    }
-
-   }
-
-   .columns-three {
+     .columns-two {
       margin: 0 auto;
-      max-width: 90%;
       overflow: hidden;
-
+      
       .column {
-         float: left;
-         margin-left: 5%;
-         width: 30%;
+        float: left;
+        padding-left: 2rem;
+        width: 50%;
+
+        &:first-child {
+          padding-left: 0;
+        }
+      
       }
 
-      .column:first-child {
-         margin-left: 0;
-      }
-   }
+     }
+
+     .columns-three {
+        margin: 0 auto;
+        max-width: 90%;
+        overflow: hidden;
+
+        .column {
+           float: left;
+           margin-left: 5%;
+           width: 30%;
+        }
+
+        .column:first-child {
+           margin-left: 0;
+        }
+     }
+    }
 
    .inline-list {
       list-style: none;
@@ -341,6 +344,19 @@
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
    PAGE SPECIFIC 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+  
+  .home {
+    .columns-two {
+      .column {
+        &:first-child {
+          text-align: center;
+        }
+        .dan {
+          max-height: 200px;      
+        }
+      }
+    }
+  } 
 
    .intro {
       color: $color-main;
@@ -466,6 +482,53 @@
       /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
          PAGE SPECIFIC 
       :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+      
+      @media only screen and (min-width : 768px){ 
+
+        .home {
+          .columns-two {
+            max-width: 748px;
+            .column {
+              float: none;
+              padding: 0;
+              width: auto;
+              &:first-child {
+                text-align: center;
+                img {
+                  max-height: 300px;
+                }
+              }
+            }
+          }
+          .dan {
+            max-height: 600px;
+          }
+        }
+
+      }
+
+      @media only screen and (min-width : 1024px){ 
+        .home { 
+          .columns-two {
+            max-width: 90%;
+            padding: 0 1em;
+            width: 100%;
+            .column {
+              float: left;
+              &:first-child {
+                img {
+                  max-height: inherit;
+                }
+                width: 38%;
+              }
+              &:last-child {
+                margin-top: 1em;
+                width: 62%;
+              }
+            }
+          }
+        }
+      }
 
    }
 

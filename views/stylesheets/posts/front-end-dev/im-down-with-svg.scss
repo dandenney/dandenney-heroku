@@ -1,6 +1,10 @@
 @import "compass";
 @import "compass/css3";
 
+article {
+	padding: 0 1em;
+}
+
 @media only screen and (min-width : 768px){ 
 
 	.container {
@@ -35,10 +39,22 @@
 	}
 
 	.large-screen {
-		margin-top: -6em;
+		margin-top: -4em;
 		img {
 			width: 100%;
 		}
+	}
+
+}
+
+@media only screen and (min-width : 832px){
+
+	body {
+		padding: 0;
+	}
+
+	.large-screen {
+		margin-top: -6em;
 	}
 
 }
