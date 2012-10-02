@@ -32,7 +32,7 @@
       %a{:href => "https://github.com/ubuwaits/css3-buttons"} CSS3 Buttons
     
     %pre
-      %code
+      %code.language-css
         :preserve   
           button {
             background-color: #7fbf4d;
@@ -98,7 +98,7 @@
     %p Now, we did some extra stuff to the new version of the button but here is the new code:
 
     %pre
-      %code
+      %code.language-css
         :preserve
           button {
             @include button(#7fbf4d, #63a62f, 3px, 1px solid #63a62f);
@@ -125,7 +125,7 @@
     %p Now, Compass writes all of the boring stuff for me and this is the end result:
     
     %pre
-      %code
+      %code.language-css
         :preserve          
           button {
             background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7fbf4d), color-stop(100%, #63a62f));
@@ -183,6 +183,7 @@
       %a{:href => "http://twitter.com/parenteau"} @ him on Twitter
       and see if he'd like to pair with you when he has some time.
 
+    - partial :'shared/comments'
 
   - partial :'shared/footer'
 

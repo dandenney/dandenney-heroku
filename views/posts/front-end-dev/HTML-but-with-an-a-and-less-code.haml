@@ -28,7 +28,7 @@
 			So this below is what it takes to build up a basic page ready for content, pulling in my sitewide CSS and <a href="http://typekit.com">Typekit</a>.
 			
 		%pre
-			%code
+			%code.language-markup
 				:preserve
 					!!! 5
 					%html{:lang => "en"}
@@ -44,7 +44,7 @@
 			On save, Codekit does it's magic compiling and this is what gets created:
 
 		%pre
-			%code
+			%code.language-markup
 				:escaped
 					<!DOCTYPE html>
 					<html lang='en'>
@@ -82,6 +82,8 @@
 
 		%small 
 			June 26, 2012
+
+		- partial :'shared/comments'
 
 	- partial :'shared/footer'
 

@@ -19,7 +19,7 @@
     %h2 The Calculator is not my friend
     %p The entire goal of flexible math was to be able to take known widths and divide them fast without having to then move decimals and add percentage signs. Sass does that stuff for you without the need to leave your editor, which is the bees knees.
     %p This isn’t fancy, I’m not trying to make a grid or anything. I just want to able to say my column is 320px wide in a 960px container.
-    %pre
+    %pre.language-css
       %code
         :preserve
           @mixin flexible-width ($context, $target) {
@@ -29,14 +29,14 @@
     %p So, what this little mixin does is sets up “flexible-width”, which is made up of a context and a target. Then it divides them, leaving a decimal. Then it multiplies that decimal by 100%. (This took a little figuring out on where to put the ‘%’)
     %p So now anytime I need a percentage width where I know the context and the target, all I have to do is call my mixin with the pixel widths:
     %pre
-      %code
+      %code.language-css
         :preserve
           .boom-dan-does-sass-now {
             @include flexible-width (960, 320);
           }
     %p The actual compiled CSS is:
     %pre
-      %code
+      %code.language-css
         :preserve
           .boom-dan-does-sass-now {
             width: 33.333%;
@@ -55,9 +55,11 @@
       %a{:href => "http://twitter.com/chriscoyier"} Chris Coyier
       to chime in on a solution for that. You just update your config.rb with this funky little stuff and set how deep you want the rabbit hole to go:
     %pre
-      %code
+      %code.language-markup
         :preserve
           Sass::Script::Number.precision = 10
+
+    - partial :'shared/comments'
 
   - partial :'shared/footer'
 

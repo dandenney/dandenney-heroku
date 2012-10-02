@@ -1,6 +1,7 @@
 @import "compass";
 @import "compass/css3";
 @import "partials/normalize";
+@import "partials/prism";
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
       Colors 
@@ -246,20 +247,6 @@
       max-width: 688px;
       width: 87.5%;
 
-
-      pre {
-         background: $color-alt;
-         padding: 0 1em;
-      }
-
-      code {
-         color: $color-feature;
-         display: block;
-         font-family: 'Courier New', Courier, monospace;
-         font-size: .75em;
-         padding: 1em 0;
-      }
-
       blockquote {
          background: $color-feature;
          font-family: Georgia, serif;
@@ -279,6 +266,15 @@
       }
 
    }
+
+  #disqus_thread {
+    @include opacity(.5);
+    @include transition(opacity 250ms linear);
+    margin-top: 4em;
+    &:hover {
+      @include opacity(1);
+    }
+  }
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
    MODULES
