@@ -58,6 +58,14 @@
       %code.language-markup
         :preserve
           Sass::Script::Number.precision = 10
+    %p
+      Also, there is a much better way to do the percentage. Sass actually has a built-in function called percentage so a mixin isn't necessary.
+    %pre
+      %code.language-css
+        :preserve
+          .mo-better-percentage {
+            width: percentage(320px / 960px);
+          }
 
     - partial :'shared/comments'
 
