@@ -27,7 +27,7 @@ end
 
 get '/stylesheets/:name.css' do
   content_type 'text/css', :charset => 'utf-8'
-  scss(:"stylesheets/#{params[:name]}" ) 
+  sass(:"stylesheets/#{params[:name]}" ) 
 end
 
 get '/stylesheets/posts/front-end-dev/name.css' do
@@ -73,6 +73,10 @@ end
   end
 
   # Front-End Dev Posts
+
+  get '/posts/front-end-dev/border-image-bits' do
+    haml :"posts/front-end-dev/border-image-bits"
+  end
   
   get '/posts/front-end-dev/im-down-with-svg' do
     haml :"posts/front-end-dev/im-down-with-svg"
@@ -107,6 +111,10 @@ end
   end
 
 # Conferences Posts
+
+  get '/posts/conferences/future-of-front-end-conf' do
+    haml :"posts/conferences/future-of-front-end-conf"
+  end
   
   get '/posts/conferences/circles-conference-2012' do
     haml :"posts/conferences/circles-conference-2012"
