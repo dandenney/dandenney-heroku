@@ -1,0 +1,55 @@
+- partial :'shared/page-open', :locals => {:title => "Front-End Conf Invitation for Doug Neiner"}
+%link(href="/stylesheets/invitations/invite.css" rel="stylesheet")
+
+%body.invite
+
+  .overlay
+
+  %h1 I would love to have you on the stage at Front-End Conf&nbsp;'13.
+
+  %p We have talked about this a little bit already, but I wanted to try to answer any questions that you may immediately have.
+
+  %section
+
+    %h2 What, Where and When is it?
+    %p It's a two-day event focused on front-end design and dev held in St. Petersburg, Florida. It will be on June 21st and 22nd in 2013.
+    %p Day one is 7 presentations from the invited speakers, like yourself. Day two is a shorter day where attendees can sign up in advance to present.
+    %p 
+      We run it in this rad theater called the Palladium and we have wrap-up videos from the last 2 years if you want an idea of the feel:
+      %a(href="http://vimeo.com/27638526")2011
+      and 
+      %a(href="http://vimeo.com/44957854")2012.
+
+    %h2 Why Me?
+    %p Pssh! This doesn't even need an explanation. Since we haven't been talking all that much lately, I'll remind you that you are one of the kindest and most talented people that I know in the industry. You're part of my Chug!
+
+    %p Aside from that, people still regularly bring up your talk from 2011. It was so awesome.
+
+    %h2 What Do You Want From Me?
+    %p I would love to have you on stage to give a presentation, which has a 50 minute window for the talk and Q&A. The topic is up to you because I feel it is important for you to choose what you are eager to share. Of course I'll provide more info about the usual crowd if you are interested in speaking. 
+
+    %p I know that you'll be working on the actual presentation until minutes before you're on the stage, but I would love to have all of the topics by the end of December. I haven't been the best about getting topics out to the crowd in a timely fashion in the past, so I would really like to launch the site with them this year.
+
+    %h2 What about Compensation?
+    %p We provide travel, lodging and fun. Our goal is for it to not cost you money to come down and present, but we don't offer actual payment. We try to keep the attendee cost as low as possible for those people not lucky enough to have company conference budgets. 
+    %p We will arrange travel and lodging or provide compensation for it if you'd like to arrange it. Typically, past speakers have flown in Thursday and out on Saturday or Sunday depending on if they wanted to attend day 2.
+    %p There is a speaker dinner the night before the event and we will arrange for lunch and dinner if you're around for those on the day of. (Many people end up out with groups.)
+
+    %h2 What's Next?
+    %p 
+      Once you've checked your calendar and given it some thought, please just shoot me an email (
+      %a(href="mailto:dan@dandenney.com")dan@dandenney.com
+      ) or a DM to let me know if you'll be making my day! Then we can work out the details.
+
+    %p 
+      %em Thank you!
+      %br
+      %em Dan
+
+  - partial :'shared/javacripts'
+
+  %script{src: 'javascripts/jquery.fittext.js'}
+  :javascript
+    $(function() {
+      $(".intro h1").fitText(.48);
+    });

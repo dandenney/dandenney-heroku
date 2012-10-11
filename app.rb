@@ -50,6 +50,30 @@ get '/work' do
   haml :work
 end
 
+get '/invitations/doug-neiner' do
+  haml :"invitations/doug-neiner"
+end
+
+get '/invitations/cameron-moll' do
+  haml :"invitations/cameron-moll"
+end
+
+get '/invitations/jenn-lukas' do
+  haml :"invitations/jenn-lukas"
+end
+
+get '/invitations/allison-wagner' do
+  haml :"invitations/allison-wagner"
+end
+
+get '/invitations/chris-coyier' do
+  haml :"invitations/chris-coyier"
+end
+
+get '/invitations/michael-parenteau' do
+  haml :"invitations/michael-parenteau"
+end
+
 get '/research' do
   haml :research
 end
