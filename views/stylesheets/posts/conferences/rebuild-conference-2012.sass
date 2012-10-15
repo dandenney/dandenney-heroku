@@ -1,0 +1,68 @@
+@import "compass"
+@import "compass/css3"
+@import "partials/mixins"
+
+$color-base: #e7e5d8
+$color-accent: #711A0D
+
+.post
+	font-family: Helvetica, Arial, sans-serif
+	font-size: .9em
+	h1, h2
+		color: #000
+		font-family: "proxima-nova-alt-1","proxima-nova-alt-2"
+		text-transform: uppercase
+	a
+		+transition(color 400ms linear)
+		color: #8F261F
+		&:hover
+			color: darken(#8F261F, 10%)
+			text-decoration: underline
+
+.container
+	margin: 0 auto
+	max-width: 700px
+	width: 90%
+	img
+		border: .5em solid $color-accent
+
+.rebuild-speaker
+	background: $color-accent
+	margin: 3em 0 1em
+	position: relative
+	h3
+		+transition(all .5s linear)
+		color: #fff
+		font-family: "proxima-nova-alt-1","proxima-nova-alt-2"
+		font-size: 2em
+		letter-spacing: -2px
+		margin: 0
+		padding: 0
+		position: absolute
+		text-align: center
+		text-transform: uppercase
+		top: 35%
+		width: 100%
+		z-index: 2
+		+respond-to(768px)
+			font-size: 6em
+	img
+		+opacity(.2)
+		+transition(all .5s linear)
+		position: relative
+		z-index: 1
+	& + p
+		margin: 0 auto
+		max-width: 700px
+		width: 90%
+
+.block-speaker
+	background: #f5f5f5
+	padding-bottom: 1em
+	&:hover
+		.rebuild-speaker
+			img
+				+opacity(1)
+			h3
+				+opacity(0)
+

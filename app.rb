@@ -136,6 +136,10 @@ end
 
 # Conferences Posts
 
+  get '/posts/conferences/rebuild-conference-2012' do
+    haml :"posts/conferences/rebuild-conference-2012"
+  end
+
   get '/posts/conferences/future-of-front-end-conf' do
     haml :"posts/conferences/future-of-front-end-conf"
   end
