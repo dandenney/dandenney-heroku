@@ -50,6 +50,10 @@ get '/work' do
   haml :work
 end
 
+get '/invitations/dave-rupert' do
+  haml :"invitations/dave-rupert"
+end
+
 get '/invitations/doug-neiner' do
   haml :"invitations/doug-neiner"
 end
@@ -147,6 +151,18 @@ end
   get '/posts/conferences/circles-conference-2012' do
     haml :"posts/conferences/circles-conference-2012"
   end
+
+get "/thoughts/" do
+  haml :"thoughts/index"
+end
+
+get "/thoughts/i-love-kippt" do
+  haml :"thoughts/i-love-kippt"
+end
+
+error 404 do
+  erb :fof
+end
 
 # Errors
 

@@ -1,0 +1,50 @@
+- partial :'shared/page-open', :locals => {:title => "Front-End Conf Invitation for Dave Rupert"}
+%link(href="/stylesheets/invitations/invite.css" rel="stylesheet")
+
+%body.invite
+
+  .overlay
+
+  %h1 Wanna bring your banjo and do Shop Talk at Front-End Conf&nbsp;'13?
+
+  %p We loved having you at the conf last year and you teased us with the prospect of coming back, playing banjo and doing Shop Talk with Chris.
+
+  %section
+
+    %h2 
+      %strike What, Where and 
+      When is it?
+    %p 
+      %strike
+        It's a two-day event focused on front-end design and dev held in St. Petersburg, Florida. 
+      It will be on June 21st and 22nd in 2013.
+
+    %h2 Why Me?
+    %p You rocked last year! We had so much fun and we had a short little talk about how cool it would be for you to walk out on the stage with your banjo and have you and Chris jam. A live version of Shop Talk would freakin' rock. If I remember right, you said that it could even be a surprise. I'm down either way and we can work out details for gathering questions and such if you're interested and available.
+
+    %h2 What Do You Want From Me?
+    %p A live version of Shop Talk with Chris on the stage. Banjo playing is optional, but it would rock. It doesn't have to be an "official" episode, of course. I'm thinking like 45 mins of Q&A like the show. We could field questions in advance if it's not a secret or score them on the day of.
+
+    %h2 What about Compensation?
+    %p It will be the same as last year. I consider you technically an eighth speaker. We provide travel, lodging and fun. Our goal is for it to not cost you money to come down and present, but we don't offer actual payment. We try to keep the attendee cost as low as possible for those people not lucky enough to have company conference budgets. 
+    %p We will arrange travel and lodging or provide compensation for it if you'd like to arrange it. Typically, past speakers have flown in Thursday and out on Saturday or Sunday depending on if they wanted to attend day 2.
+    %p There is a speaker dinner the night before the event and we will arrange for lunch and dinner if you're around for those on the day of. (Many people end up out with groups.)
+
+    %h2 What's Next?
+    %p 
+      Once you've checked your calendar and given it some thought, please just shoot me an
+      %a(href="mailto:dan@frontenddesignconference.com") email
+      or a DM to let me know if you'll be making my day! Then we can work out the details.
+
+    %p 
+      %em Thank you!
+      %br
+      %em Dan
+
+  - partial :'shared/javacripts'
+
+  %script{src: 'javascripts/jquery.fittext.js'}
+  :javascript
+    $(function() {
+      $(".intro h1").fitText(.48);
+    });

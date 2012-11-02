@@ -227,6 +227,50 @@ footer
   
   small
     color: $color-main-light
+
+// ===== THOUGHTS
+
+.thoughts
+  .thoughts-nav
+    ol
+      margin: 0
+    li
+      +transition(background .25s linear)
+      border-top: 1px solid #f1f1f1
+      margin: 0
+      &:hover
+        background: lighten($color-link-main, 10%)
+        h2
+          color: #fff
+    a
+      display: block
+      h2
+        color: $color-link-main
+        font-weight: 700
+        margin: 0 auto
+        max-width: 688px
+        padding: .75em 0 .75em .75em
+        width: 87.5%
+        text-decoration: none 
+  article
+    border-top: 1px solid #f1f1f1
+    margin: 1em 0
+    padding: 1em 0
+    &:first-of-type
+      border-top: none
+      margin-top: 0
+    h2
+      margin-top: 0
+  time
+    color: #d4d4d4
+    display: block
+    font-size: .8em
+    text-align: right
+  .wrapper
+    max-width: 688px
+    width: 87.5%
+  footer
+    margin-top: 0
     
 // ===== MODULES
 
