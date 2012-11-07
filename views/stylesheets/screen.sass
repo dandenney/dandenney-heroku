@@ -16,7 +16,7 @@ $color-link-alt: #921820
 
 // ===== Fonts
 
-$font-base: "museo-slab-1","museo-slab-2", "Helvetica Neue", Helvetica, sans-serif
+$font-base: "museo-sans-1","museo-sans-2", Georgia, "Helvetica Neue", Helvetica, sans-serif
 $font-featured: "prenton-condensed-1","prenton-condensed-2", "Helvetica Neue", Helvetica, sans-serif
 
 @font-face
@@ -31,11 +31,19 @@ $font-featured: "prenton-condensed-1","prenton-condensed-2", "Helvetica Neue", H
   content: attr(data-icon)
   speak: none
 
+%group
+  zoom: 1
+  &:before,
+  &:after
+    content: ''
+    display: table
+  &:after
+    clear: both
+
 // ===== GLOBAL 
 
 html
   background: $color-feature
-
 
 body
   background: #fff
@@ -43,7 +51,7 @@ body
   font-family: $font-base
   font-size: 1em
   line-height: 1.4
-  font-weight: 400
+  font-weight: 300
 
 h1, h2, h3, h4, h5, h6
   color: $color-title
@@ -83,7 +91,7 @@ h4 + p
 
 a
   color: $color-link-main
-  font-weight: 700
+  font-weight: 500
   text-decoration: none
 
 a[href^="http://"]:not([href*="dandenney.com"]):after
@@ -117,23 +125,21 @@ img, embed, object, iframe
 // ===== HEADER 
 
 header
+  @extend %group
   background: $color-feature
   border-bottom: 1px solid #f5f5f5
   color: $color-main-light
-  overflow: hidden
-  padding: 1em 
+  padding: .25em 
 
   a
     float: left
   
-
   img
     float: left
-    max-width: 15%
+    height: 2.5em
     +respond-to(768px) 
-      max-width: 10%
+      max-height: 3em
   
-
   .logo
     background: none 
 
@@ -141,7 +147,8 @@ header
     color: $color-title
     @include text-shadow(inset 2px 2px 0 rgba(250,250,250,1))
     float: left
-    font-size: 1.5em
+    font-size: 1em
+    line-height: 1.1
     margin: .25em 0 0 .5em
   
   .logo span
@@ -150,8 +157,8 @@ header
     font-size: .75em
   
   nav
-    float: left
-    margin-top: .75em
+    float: right
+    margin-top: 0
     +respond-to(768px)
       float: right
   
@@ -170,7 +177,7 @@ header
 
   [data-icon]:before
     color: $color-link-main
-    font-size: 2em
+    font-size: 1.5em
     margin-right: .15em
 
   +respond-to(768px)
@@ -185,7 +192,8 @@ header
 footer
   @include box-shadow (inset 0 .15em .15em rgba(0,0,0,.2))
   background: $color-feature
-  padding: 1em
+  font-size: .8em
+  padding: .5em
 
   nav
     float: right
@@ -236,20 +244,16 @@ footer
       margin: 0
     li
       +transition(background .25s linear)
-      border-top: 1px solid #f1f1f1
       margin: 0
-      &:hover
-        background: lighten($color-link-main, 10%)
-        h2
-          color: #fff
+      + li
+        border-top: 1px solid #f1f1f1
     a
-      display: block
       h2
         color: $color-link-main
         font-weight: 700
-        margin: 0 auto
+        margin: 0
         max-width: 688px
-        padding: .75em 0 .75em .75em
+        padding: 0
         width: 87.5%
         text-decoration: none 
   article
@@ -265,6 +269,7 @@ footer
     color: #d4d4d4
     display: block
     font-size: .8em
+    margin-top: 1em
     text-align: right
   .wrapper
     max-width: 688px

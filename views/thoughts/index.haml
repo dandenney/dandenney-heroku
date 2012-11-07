@@ -1,19 +1,12 @@
-- partial :'shared/page-open', :locals => {:title => "Posts by Dan Denney"}
+.thoughts
 
-%body.thoughts
-
-  - partial :'shared/header'
-
-  %nav.thoughts-nav
-    %ol
-      %li
-        %a(href="/thoughts/i-love-kippt") 
-          %h2 I love Kippt
-      %li
-        %a(href="#")
-          %h2 I love Kippt
-
-
-- partial :'shared/footer'
-
-- partial :'shared/javacripts'
+  %article
+    .container
+      %nav.thoughts-nav
+        %ol
+          %li
+            - partial :'thoughts/attitude-reflect-leadership'
+          %li
+            - partial :'thoughts/execution-is-all-that-matters'
+          %li
+            - partial :'thoughts/i-love-kippt'

@@ -1,21 +1,13 @@
-- partial :'shared/page-open', :locals => {:title => "Posts by Dan Denney"}
-
-%body.thoughts
-
-  - partial :'shared/header'
-
+.thoughts
   %article
     .wrapper
       %time(datetime="2012-9-15")
         September 15, 2012
-      %h2 I love Kippt
+      %a(href="/thoughts/i-love-kippt") 
+        %h2 I love Kippt
       %p
         I've been a Twitter addict for a few years now. The primary reason that I am addicted is that it is my main way of discovering things related to front-end work. Of course, I dig the social part of having tweetversations but the links are my main reason for going.
       %p
         %a(href="http://kippt.com") Kippt
         has provided the best UI and UX that I have seen for link collectors like myself. It is a gorgeous site and has all of the right features for quickly organizing and discovering links. It is a fantastic design and I love it. So, I'm dedicating extra time each day to build up 
         %a(href="https://kippt.com/dandenney") my collection.      
-
-- partial :'shared/footer'
-
-- partial :'shared/javacripts'

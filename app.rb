@@ -18,7 +18,7 @@ configure :production do
 end
 
 configure do
-  set :haml, {:format => :html5, :escape_html => true}
+  set :haml, {:format => :html5}
   set :scss, {:style => :compact, :debug_info => false}
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.rb'))
 end
@@ -158,6 +158,14 @@ end
 
 get "/thoughts/i-love-kippt" do
   haml :"thoughts/i-love-kippt"
+end
+
+get "/thoughts/execution-is-all-that-matters" do
+  haml :"/thoughts/execution-is-all-that-matters"
+end
+
+get "/thoughts/attitude-reflect-leadership" do
+  haml :"/thoughts/attitude-reflect-leadership"
 end
 
 error 404 do

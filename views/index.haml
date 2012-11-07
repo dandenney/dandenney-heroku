@@ -1,9 +1,4 @@
-- partial :'shared/page-open', :locals => {:title => "Dan Denney, a front-end developer"}
-
-%body.home
-
-  - partial :'shared/header'
-
+.home
   .columns-two
     .column
       %img.dan(src="/images/dan-code-school.svg")
@@ -37,12 +32,3 @@
         %p 
           %small There's more to the story: I'm a husband, dad, traveler, music lover and a foodie but most of my sharing on here is about the interwebs.
 
-  - partial :'shared/footer'
-
-  - partial :'shared/javacripts'
-
-  %script{src: 'javascripts/jquery.fittext.js'}
-  :javascript
-    $(function() {
-      $(".intro h1").fitText(.48);
-    });
