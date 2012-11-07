@@ -69,3 +69,12 @@
         $(".intro h1").fitText(.48);
       });
     %script{src: '/javascripts/jquery.fittext.js'}
+
+    %script{src: 'javascripts/jquery-scorecard.min.js'}
+    :javascript
+      $(function() {
+        $('.js-scorecard').scorecard({
+          username: 'dandenney',
+          sections: ['completed']  
+        });
+      });
